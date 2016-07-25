@@ -1,0 +1,75 @@
+// Custom Google Fonts
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,300italic,700,900,100);
+// Lato Documentation: 
+     // 900        => Ultra Bold;
+     // 700        => Bold;
+     // 400        => Regular;
+     // 300        => Thin 
+     // 300 italic => Thin Italic; 
+     // 100        => Ultra Thin;
+
+
+// Bootstrap Structure
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+@import "bootstrap/normalize";
+@import "bootstrap/print";
+@import "bootstrap/grid";
+@import "bootstrap/tables";
+// Custom Variables & mixins
+@import "custom-variables";
+// @import "custom-mixins";
+// Responsive
+// @import "custom-responsive";
+
+// Compass
+@import "compass";
+
+/**/
+
+/* Common css */
+.clearfix {
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+.center-block {
+  display: block;
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left:0px;
+  padding-right:0px;
+}
+.row .center-block {
+	padding-left:15px;
+	padding-right:15px;
+}
+*,
+*:before,
+*:after {
+  @include box-sizing(border-box);
+}
+.pull-left { float:left;}
+.pull-right { float:right;}
+.text-center { text-align:center;}
+.text-right { text-align:right;}
+.text-left { text-align:left;}
+a, a:focus, input:focus, textarea:focus, select:focus { outline:none; text-decoration:none;}
+img { max-width:100%; vertical-align:middle;}
+figure {margin:0;}
+dl, dt, dd {margin:0;}
+blockquote, ul, li, h1, h2, h3, h4, h5, h6, p { margin:0; padding:0; }
+li { list-style:none; }
+
+.test { border:1px solid $primary}
+
+
+body {
+
+}
