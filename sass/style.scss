@@ -8,7 +8,6 @@
      // 300 italic => Thin Italic; 
      // 100        => Ultra Thin;
 
-
 // Bootstrap Structure
 @import "bootstrap/variables";
 @import "bootstrap/mixins";
@@ -21,7 +20,6 @@
 // @import "custom-mixins";
 // Responsive
 // @import "custom-responsive";
-
 // Compass
 @import "compass";
 
@@ -67,9 +65,66 @@ dl, dt, dd {margin:0;}
 blockquote, ul, li, h1, h2, h3, h4, h5, h6, p { margin:0; padding:0; }
 li { list-style:none; }
 
-.test { border:1px solid $primary}
+.test { border:1px solid $red}
+
 
 
 body {
+    font-family: $font-family-lato;
+    font-size: 18px;
+    line-height: 22px;
+    color: $white;
+    background-color: $white; }
 
+  header {
+    background-color: $black;
+    nav {
+      text-align:right;
+      li {
+        display: inline-block;
+        margin: 35px 10px;
+        a {
+          font-family: $font-family-lato;
+          font-weight:$ultra-bold;
+          color:$white;
+          font-size:18px;
+          padding:0 10px;
+        } // a
+      } // li
+    } // nav
+  } // header
+
+.static-video {
+  min-height:785px;
 }
+
+
+// Dummy test contents
+.video-section .pattern-overlay {
+background-color: rgba(71, 71, 71, 0.59);
+padding: 110px 0 32px;
+min-height: 496px; 
+/* Incase of overlay problems just increase the min-height*/
+}
+.video-section h1, .video-section h3{
+text-align:center;
+color:#fff;
+}
+.video-section h1{
+font-size:110px;
+font-family: 'Buenard', serif;
+font-weight:bold;
+text-transform: uppercase;
+margin: 40px auto 0px;
+text-shadow: 1px 1px 1px #000;
+-webkit-text-shadow: 1px 1px 1px #000;
+-moz-text-shadow: 1px 1px 1px #000;
+}
+.video-section h3{
+font-size: 25px;
+font-weight:lighter;
+margin: 0px auto 15px;
+}
+.video-section .buttonBar{display:none;}
+.player {font-size: 1px;}
+

@@ -10,9 +10,15 @@ requirejs.config({
     "smoothscroll": ["jquery"],
 		"appeared": ["jquery"],
 		"jquery.matchHeight-min": ["jquery"],
-    "jquery-ui": ["jquery"]
+    "jquery-ui": ["jquery"],
+    "custom": ["jquery"]
     }
 });
 
 // Load the main app module to start the app
-requirejs(["app/main"]);
+
+
+    $(".player").mb_YTPlayer();
+
+    console.log('Hello')
+
