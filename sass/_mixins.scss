@@ -1,0 +1,25 @@
+@mixin breakpoint($point) {
+  
+  @if $point == ultra-hd {
+    @media (min-width: 993px) { @content; }
+  }
+
+  @if $point == desktop {
+    @media (min-width: 992px) { @content; }
+  }
+
+
+  @else if $point == half-hd {
+    @media (max-width: 992px)  { @content; }
+  }
+
+  @else if $point == below-tab {
+    @media (max-width: 767px)  { @content; }
+  } // 
+
+} // Breakpoint
+
+
+// Ex: @include breakpoint(full-hd){width:100%;}
+// Ex: @include breakpoint(half-hd){width:100%;}
+// Ex: @include breakpoint(semi-hd){width:100%;}

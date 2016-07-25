@@ -11,14 +11,15 @@ requirejs.config({
 		"appeared": ["jquery"],
 		"jquery.matchHeight-min": ["jquery"],
     "jquery-ui": ["jquery"],
-    "custom": ["jquery"]
+    "jquery.vide": ["jquery"]
     }
 });
 
 // Load the main app module to start the app
 
 
-    $(".player").mb_YTPlayer();
 
-    console.log('Hello')
+    // console.log($('body').length)
+
+
 

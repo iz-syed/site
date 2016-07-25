@@ -16,8 +16,8 @@
 @import "bootstrap/grid";
 @import "bootstrap/tables";
 // Custom Variables & mixins
-@import "custom-variables";
-// @import "custom-mixins";
+@import "variables";
+@import "mixins";
 // Responsive
 // @import "custom-responsive";
 // Compass
@@ -65,6 +65,13 @@ dl, dt, dd {margin:0;}
 blockquote, ul, li, h1, h2, h3, h4, h5, h6, p { margin:0; padding:0; }
 li { list-style:none; }
 
+h1 { color:$black; font-size:85px; line-height: 92px; }
+h2 { color:$black; font-size:45px; line-height:52px; }
+h3 { color:$black; font-size:30px; line-height:46px; }
+h4 { color:$black; font-size:20px; line-height:30px; }
+h5 { color:$black; font-size:18px; }
+
+
 .test { border:1px solid $red}
 
 
@@ -95,36 +102,206 @@ body {
   } // header
 
 .static-video {
-  min-height:785px;
-}
+  min-height:600px;
+  background-color: $black;
+
+  .banner-logo {
+    margin:50px 0;
+  }
+
+  .static-left {
+
+    h3 {
+      font-weight:$ultra-bold;
+    }
+
+  }
+ 
+ .static-right {
+    text-align: center;
+
+      h1 {
+        font-weight:$ultra-bold;
+        color:$white;
+      } // h1
+      
+      p {
+        font-weight:$ultra-bold;
+        font-size:26px;
+        line-height: 46px;
+      } // p
+
+      a {
+        color:$white;
+        background-color: $green;
+        @include border-radius(10px);
+        padding:25px 60px;
+        font-weight:$ultra-bold;
+        font-size:30px;
+        margin-top: 25px;
+        display: inline-block;
+      } // a
+   } // static-right 
+} // static-video
 
 
-// Dummy test contents
-.video-section .pattern-overlay {
-background-color: rgba(71, 71, 71, 0.59);
-padding: 110px 0 32px;
-min-height: 496px; 
-/* Incase of overlay problems just increase the min-height*/
+.wide-bg {
+  
+ 
+  .box-bg {
+   
+    
+
+  } // dark-bg
+} //wide-bg
+
+// Section 1
+.magento-light {
+  background-color: $magento-light;
+  padding-bottom:150px;
+  @include breakpoint(half-hd){
+    padding-top:55px;
+  }
+
+  .magento-dark {
+    background-color: $magento-dark;
+    @include border-radius(20px);
+    padding:55px 30px;
+    margin-top:-115px;
+
+    @include breakpoint(half-hd){
+      margin-top:0;
+    }
+    
+    h2 {
+      font-weight:$ultra-bold;
+      color:$white;
+    } // h2
+
+    h3 {
+      font-weight: $thin;
+      font-style:italic;
+      color:$white;
+    } // h3
+  } // magento-dark
+
+  
+
+} // magento-light
+
+.product-wrapper {
+  padding-top:15px;
+  figure {
+    a{
+      color:$white;
+      font-weight:$ultra-bold;
+      font-size: 20px;
+      text-align: center;
+      display: block;
+      border:2px solid transparent;
+      padding:15px 0;
+      &:hover {
+        border-color: rgba($white, 0.8);
+        @include border-radius(20px);
+      }
+    }
+
+  }
+    
 }
-.video-section h1, .video-section h3{
-text-align:center;
-color:#fff;
-}
-.video-section h1{
-font-size:110px;
-font-family: 'Buenard', serif;
-font-weight:bold;
-text-transform: uppercase;
-margin: 40px auto 0px;
-text-shadow: 1px 1px 1px #000;
--webkit-text-shadow: 1px 1px 1px #000;
--moz-text-shadow: 1px 1px 1px #000;
-}
-.video-section h3{
-font-size: 25px;
-font-weight:lighter;
-margin: 0px auto 15px;
-}
-.video-section .buttonBar{display:none;}
-.player {font-size: 1px;}
+
+// section 2
+
+.orange-light {
+  background-color: $orange-light;
+  @include breakpoint(half-hd){
+    padding-top:55px;
+  }
+
+    .save-drop {
+      text-align: center;
+      margin-top:-115px;
+      @include breakpoint(half-hd){
+        margin-top:0;
+      }
+
+      .drop-left {
+      }
+      .drop-right {
+      }
+    }  // save-drop
+
+    .orange-info {
+      background-color: $orange-dark; 
+      @include border-radius(20px);  
+      padding-top:35px;
+      padding-bottom:35px;
+      counter-reset: line;
+
+      @include breakpoint(half-hd){
+          margin:50px 0;
+        }
+
+      .box-column {
+        padding-top:50px;
+        position: relative;
+        text-align: center;
+
+        @include breakpoint(half-hd){
+          margin-bottom:50px;
+        }
+
+        h3 {
+          font-weight:$ultra-bold;
+          margin-bottom:30px;
+          color:$white;
+        }
+
+        p {
+          font-weight: $regular;
+          font-size:24px;
+          line-height:32px;
+
+          @include breakpoint(half-hd){
+          br {
+            display: none;
+          }
+        }
+        }
+
+
+         &:before {
+            counter-increment: line;
+            content: counter(line);
+            display: inline-block;
+            width:50px;
+            height:50px;
+            background-color:$orange-light;
+            position: absolute;
+            left:0;
+            right:0;
+            margin: 0 auto;
+            top:0;
+            text-align:center;
+            font-weight: $ultra-bold;
+            font-size:30px;
+            line-height:45px;
+            @include border-radius(50%); 
+      }
+
+      } // box-column
+    } // orange-info
+
+
+
+
+} // Orange-light
+
+
+
+
+
+
+
+
 
