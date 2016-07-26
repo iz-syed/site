@@ -2988,7 +2988,7 @@ label.error {
 
 .supports-fontface .icon:before {
   display: inline;
-  font-family: "icons";
+  font-family: icons;
   text-decoration: none;
   speak: none;
   font-style: normal;
@@ -5832,4 +5832,89 @@ header nav li a {
   height: 100px;
   top: 0;
   z-index: -1;
+}
+
+footer {
+  background-color: #000000;
+  padding: 30px 0;
+}
+@media (max-width: 767px) {
+  footer .footer-logo {
+    text-align: center;
+  }
+}
+footer .footer-links {
+  text-align: center;
+}
+@media (max-width: 767px) {
+  footer .footer-links {
+    border: 1px solid #ffffff;
+    border-right: 0;
+    border-left: 0;
+    padding: 10px;
+    margin: 15px 0;
+  }
+}
+footer .footer-links li {
+  display: inline-block;
+  margin: 0 5px;
+  padding: 65px 0;
+}
+@media (max-width: 767px) {
+  footer .footer-links li {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+}
+footer .footer-links li a {
+  font-weight: 900;
+  font-size: 14px;
+  color: #ffffff;
+  padding: 15px;
+}
+@media (min-width: 992px) {
+  footer .footer-socials {
+    text-align: right;
+  }
+}
+@media (max-width: 767px) {
+  footer .footer-socials {
+    text-align: center;
+  }
+}
+footer .footer-socials li {
+  display: inline-block;
+  margin: 0 10px;
+  padding: 60px 0;
+}
+@media (max-width: 767px) {
+  footer .footer-socials li {
+    padding: 10px 0;
+  }
+}
+footer .footer-socials li span:before {
+  font-size: 32px;
+}
+@media (min-width: 992px) {
+  footer .copyright p.copy-text {
+    text-align: right;
+    position: relative;
+    top: -35px;
+  }
+}
+@media (max-width: 767px) {
+  footer .copyright p.copy-text {
+    text-align: center;
+  }
+}
+footer .copyright p.warning-text {
+  font-size: 14px;
+}
+@media (max-width: 767px) {
+  footer .copyright p.warning-text {
+    margin-top: 25px;
+  }
+}
+footer .copyright p:not(.copy-text) {
+  margin-top: 10px;
 }
