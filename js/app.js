@@ -11,7 +11,8 @@ requirejs.config({
 		"appeared": ["jquery"],
 		"jquery.matchHeight-min": ["jquery"],
     "jquery-ui": ["jquery"],
-    "jquery.vide": ["jquery"]
+    "jquery.vide": ["jquery"],
+    "timber": ["jquery"]
     }
 });
 
