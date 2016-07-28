@@ -24,6 +24,7 @@
 // @import "custom-responsive";
 // Compass
 @import "compass";
+@import "CSS:css/animate";
 
 /**/
 
@@ -107,16 +108,28 @@ body {
     font-family: $font-family-lato;
     font-size: 18px;
     line-height: 22px;
-    color: $white;
+    //color: $white;
     background-color: $white; }
 
   header {
     background-color: $black;
-    nav {
-      text-align:right;
+    position: relative;
+    z-index: 9;
+    padding:15px 0;
+
+    .logo-wrapper {
+      text-align: center;
+    }
+
+    .h-nav {
+      
+      @include breakpoint(tab-min) {
+          text-align:right;
+      } // max width 768
+
       li {
         display: inline-block;
-        margin: 35px 10px;
+        margin: 20px 10px;
         a {
           font-family: $font-family-lato;
           font-weight:$ultra-bold;
@@ -131,6 +144,8 @@ body {
 .static-video {
   min-height:600px;
   background-color: $black;
+  position: relative;
+  z-index: 0;
 
   .banner-logo {
     margin:50px 0;
@@ -140,6 +155,11 @@ body {
 
     h3 {
       font-weight:$ultra-bold;
+      color:$white;
+    }
+
+    @include breakpoint(below-tab){
+      text-align:center
     }
 
   }
@@ -156,6 +176,7 @@ body {
         font-weight:$ultra-bold;
         font-size:26px;
         line-height: 46px;
+        color:$white;
       } // p
 
       a {
@@ -174,7 +195,24 @@ body {
           } // max width 767 
 
       } // a
-   } // static-right 
+
+      @include breakpoint(below-tab){ 
+          margin-bottom:15px;
+      }
+   } // static-right
+
+   .video-bg { 
+    width:100%;
+    min-height:600px;
+    z-index: -1;
+    position: absolute;
+    top:0;
+
+    video {
+      position: fixed !important;
+    }
+
+  } 
 } // static-video
 
 
@@ -192,8 +230,29 @@ body {
 .magento-light {
   background-color: $magento-light;
   padding-bottom:150px;
+  position: relative;
   @include breakpoint(half-hd){
     padding-top:55px;
+  }
+
+  .page-title {
+    // padding-top:115px;
+
+
+    .container {
+      padding:100px 0 50px 0; 
+      
+      h2 {
+        color: $white;
+        font-weight:$ultra-bold;
+        text-align: center;
+      }
+
+    }
+  }
+
+  .page-title + .container .magento-dark { 
+    margin-top:0;
   }
 
   .magento-dark {
@@ -201,6 +260,7 @@ body {
     @include border-radius(20px);
     padding:55px 30px;
     margin-top:-115px;
+    position: relative;
 
     @include breakpoint(half-hd){
       margin-top:0;
@@ -296,6 +356,7 @@ body {
           font-weight: $regular;
           font-size:24px;
           line-height:32px;
+          color:$white;
 
           @include breakpoint(half-hd){
           br {
@@ -322,6 +383,7 @@ body {
             font-size:30px;
             line-height:45px;
             @include border-radius(50%); 
+            color:$white;
       }
 
       } // box-column
@@ -346,6 +408,7 @@ body {
 .black {
   background-color: $black;
   padding:55px 30px;
+  position: relative;
 
   h2 {
       font-weight:$ultra-bold;
@@ -517,6 +580,7 @@ a.mixing {
 footer {
   background-color: $black;
   padding:30px 0;
+  position: relative;
 
   .footer-logo {
       @include breakpoint(below-tab){ 
@@ -588,6 +652,7 @@ footer {
 
 
   .copyright {
+        color:$white;
 
         p.copy-text {
          
@@ -610,7 +675,7 @@ footer {
         @include breakpoint(below-tab){ 
             margin-top:25px;
           } // max width 767
-      }
+      } // warning-text
 
       p:not(.copy-text) {
         margin-top:10px;
@@ -624,7 +689,162 @@ footer {
 }  // footer
 
 
+.appear{-moz-appearance:none;-webkit-appearance:none;appearance:none}
 
+// sign up page
+
+.page-black {
+  background-color: $black;
+  padding:150px 0;
+}
+
+.sign-up {
+  max-width:650px;
+
+  h2 {
+    font-weight:$ultra-bold;
+    color:$white;
+    text-align: center;
+    span {
+      font-weight: $regular;
+    }
+
+  } // h2
+
+  h3 {
+    color:$white;
+    text-align: center;
+    font-weight: $regular;
+  }
+
+  .top-radius {
+    input[type="text"] {
+
+    }
+  }
+
+} // sign-up
+
+// Theme edit
+.nav-bar {
+   background-color:$black;
+}
+
+.site-nav {
+  li {
+    a {
+      color: $white;
+
+      &:hover {
+        color:rgba($white, 0.8);
+      }
+    }
+  }
+}
+
+.site-nav__link {
+  @include breakpoint(tab){ 
+    color:$white;
+
+    &:hover {
+      color:$magento-dark;
+    }
+  }
+}
+
+.site-nav--active > a { 
+  // color:$magento-light !important;
+  border-bottom:3px solid $magento-light;
+}
+
+.site-header[role="banner"] { display: none}
+// Theme edit
+
+/* Developer style sheet */
+.home-logo { max-width:160px; margin-top:7px}
+.template-index {    color: #fff;}
+
+// Privacy policy title
+#privacy-policy {
+  #cms-title { 
+    position:relative;
+
+      .grid__item {
+        h1 {
+          background-color:$red; 
+          color:$white; 
+          font-weight:900; 
+          padding:85px 0 ; 
+          text-align:center; 
+          font-size:62px; 
+          margin-top:-30px;
+
+          @include breakpoint(below-tab){ 
+              font-size:46px;
+              margin-top:0;
+              padding:45px 0;
+          } // max width 767
+        } // h1
+      } // grid__item
+
+    &:before {
+      position:absolute; 
+      content:""; 
+      color:$red; 
+      width:100%; 
+      height:270px; 
+      background-color:$red;
+      top:-30px;
+
+      @include breakpoint(below-tab){ 
+          height:200px;
+      } // max widt 767
+    } // cms-title:before
+  } // cms-title
+} // privacy-policy
+
+
+// Terms & condition
+#terms-and-conditions {
+  #cms-title { 
+    position:relative;
+
+      .grid__item {
+        h1 {
+          background-color:$orange-light; 
+          color:$white; 
+          font-weight:900; 
+          padding:85px 0 ; 
+          text-align:center; 
+          font-size:62px; margin-top:-30px;
+
+          @include breakpoint(below-tab){ 
+              font-size:46px;
+              margin-top:0;
+              padding:45px 0;
+          } // max width 767
+        } // h1
+      } // grid__item
+
+    &:before {
+      position:absolute; 
+      content:""; 
+      color:$orange-light; 
+      width:100%; 
+      height:270px; 
+      background-color:$orange-light;
+      top:-30px;
+
+      @include breakpoint(below-tab){ 
+          height:200px;
+      } // max width 767
+    } // grid__item:before
+  } // cms-title
+} // terms-and-conditions
+
+.copyright p { color:#fff; }
+
+/* Developer style sheet */
 
 
 

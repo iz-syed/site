@@ -8,10 +8,18 @@
     @media (min-width: 992px) { @content; }
   }
 
+  @else if $point == tab-min {
+    @media (min-width: 768px)  { @content; }
+  }
 
   @else if $point == half-hd {
     @media (max-width: 992px)  { @content; }
   }
+
+  @else if $point == tab {
+    @media (max-width: 768px)  { @content; }
+  }
+
 
   @else if $point == below-tab {
     @media (max-width: 767px)  { @content; }
@@ -23,3 +31,11 @@
 // Ex: @include breakpoint(full-hd){width:100%;}
 // Ex: @include breakpoint(half-hd){width:100%;}
 // Ex: @include breakpoint(semi-hd){width:100%;}
+
+
+@mixin transition($transition...) {
+    -moz-transition:    $transition;
+    -o-transition:      $transition;
+    -webkit-transition: $transition;
+    transition:         $transition;
+}

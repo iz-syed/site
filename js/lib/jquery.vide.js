@@ -164,10 +164,10 @@
       callback(this.src);
     };
 
-    $('<img src="' + path + '.gif">').on('load', onLoad);
+    //$('<img src="' + path + '.gif">').on('load', onLoad);
     $('<img src="' + path + '.jpg">').on('load', onLoad);
-    $('<img src="' + path + '.jpeg">').on('load', onLoad);
-    $('<img src="' + path + '.png">').on('load', onLoad);
+    //$('<img src="' + path + '.jpeg">').on('load', onLoad);
+    //$('<img src="' + path + '.png">').on('load', onLoad);
   }
 
   /**
