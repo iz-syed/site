@@ -46,49 +46,24 @@
           
           <!-- begin site-nav -->
           <ul class="site-nav" id="AccessibleNav">
-            
-              
-              
-              
                 <li>
                   <a href="/how-it-works" class="site-nav__link">How it Works</a>
-                </li>
-              
-            
-              
-              
-              
+                </li>              
                 <li>
                   <a href="http://join" class="site-nav__link">Join Now</a>
                 </li>
-              
-            
-              
-              
-              
                 <li>
                   <a href="http://mixology" class="site-nav__link">Mixology</a>
                 </li>
-              
-            
-              
-              
-              
                 <li>
                   <a href="http://login" class="site-nav__link">Login</a>
+                </li>            
+                <li>
+                  <!-- Default user pic -->
+                  <a href="/cart">
+                    <img src="//cdn.shopify.com/s/files/1/1393/7755/t/2/assets/default-user.png?4288349819510572193" alt="User name">
+                  </a>
                 </li>
-              
-            
-            
-            
-            <li>
-              <!-- Default user pic -->
-              <a href="/cart">
-                <img src="//cdn.shopify.com/s/files/1/1393/7755/t/2/assets/default-user.png?4288349819510572193" alt="User name">
-              </a>
-            </li>
-            
-            
           </ul>
           
           
@@ -134,30 +109,59 @@
     
 </header>
 
-<div class="page-black page-padder">
-	
-
+<div class="page-black page-padder"> <!--   Screen 1 -->
 <div class="content-area">
 	<div class="container">
-		<div class="center-block sign-up test">
+    <div class="center-block sign-up">
 			<h2><span>SIGN IN TO</span> JOOSEONTAP.COM</h2>
 			<h3>This site is limited to users of legal age</h3>
 
-			  <form action="" method="post" name="" class="">
-
+			  <form action="" method="post" name="" class="center-block">
 			  		<div class="top-radius">
 			     		<input type="text" class="form-control" name="Username" placeholder="Email Address" />
 			  		</div>
 			  		<div class="bottom-radius">	  			
 					     <input type="password" class="form-control" name="Password" placeholder="Password" />         
 			  		</div>
-			     	<button class="btn btn-lg btn-primary btn-block"  name="Submit" value="Login" type="Submit">Login</button>     
+            <div class="normal-radius dob-picker clearfix">
+              <label for="all">
+                Date of Birth
+              </label>
+                <div class="first">
+                  <select>
+                    <option>MM</option>
+                  </select>
+                </div>
+                
+                <div class="middle">
+                  <select>
+                    <option>DD</option>
+                  </select>
+                </div>
+
+                <div class="last">
+                  <select>
+                    <option>YYYY</option>
+                  </select>
+                </div>
+            </div>
+
+            <div class="normal-radius">
+              <a href="#" class="forgot-pass">Forgot your password?</a>
+            </div>
+
+            <div class="normal-radius">
+              <input type="submit" value="Sign Up" data-role="signup">
+            </div>
+
+            <div class="normal-radius">
+              <input type="submit" value="Enter" data-role="enter">
+            </div>
 			  </form> 
 		</div>
 	</div>
 </div>
-
-</div>
+</div> <!--   Screen 1 -->
 
 <footer>
 	<div class="container">
@@ -213,7 +217,7 @@
 
 
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
 
 <script>window.jQuery || document.write('<script src="js/lib/jquery.min.js"><\/script>')</script>
 <script src="js/lib/jquery-ui.min.js"></script>

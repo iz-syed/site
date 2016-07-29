@@ -82,7 +82,13 @@ h1 {
 h2 { 
   color:$black; 
   font-size:45px; 
-  line-height:52px; }
+  line-height:52px;
+    
+    @include breakpoint(below-tab) { 
+      font-size:2em
+    }
+
+   }
 
 h3 { 
   color:$black; 
@@ -701,27 +707,135 @@ footer {
 .sign-up {
   max-width:650px;
 
-  h2 {
-    font-weight:$ultra-bold;
-    color:$white;
-    text-align: center;
-    span {
+    form {
+        padding:20px 55px;
+        max-width:500px;
+
+          @include breakpoint(below-tab) {
+            padding-left:0;
+            padding-right:0;    
+          }
+
+        input {
+          @include border-radius(0);
+          font-weight:$ultra-bold;
+          padding-top:15px;
+          padding-bottom:15px;
+        }
+
+        select {
+          background:$white;
+          font-weight:$ultra-bold;
+          margin:0;
+          padding-top:15px;
+          padding-bottom:15px;
+        }
+
+        .top-radius {
+          input[type="text"] {
+            @include border-top-radius(10px);
+            width:99%;
+          }
+        } // top-radius
+
+        .bottom-radius {
+          input[type="password"] {
+            @include border-bottom-radius(10px);
+            width:99%;
+          }
+        } // top-radius
+
+        .dob-picker {
+            .first, .middle, .last {
+              display:inline-block;
+              width:33%;
+              float:left;
+                
+                select {
+                  @include border-radius(0);
+                  width:100%;
+                } // select
+
+            } // first, middle, last
+
+            .first {
+                select{
+                  @include border-left-radius(10px);
+                }
+            }
+
+            .last {
+                select{
+                  @include border-right-radius(10px);
+                }
+            }
+
+            label {
+              display:block;
+              color:$white;
+              font-weight:$ultra-bold;
+              margin:15px 0;
+            }
+
+        } // dob-picker
+
+        .forgot-pass {
+          display:block;
+          color:$white;
+          font-weight:$ultra-bold;
+          margin:15px 0;
+          text-decoration:underline;
+        }
+    }
+
+    h2 {
+      font-weight:$ultra-bold;
+      color:$white;
+      text-align: center;
+      span {
+        font-weight: $regular;
+      }
+
+    } // h2
+
+    h3 {
+      color:$white;
+      text-align: center;
       font-weight: $regular;
     }
 
-  } // h2
+    [data-role="signup"] {
+      font-weight:$ultra-bold;
+      color:$white;
+      font-size:2em;
+      width:100%;
+      @include border-radius(10px);
+      background-color:$green;
+      border:0;
+      text-transform:uppercase;
+      margin:15px 0;
 
-  h3 {
-    color:$white;
-    text-align: center;
-    font-weight: $regular;
-  }
+      &:hover {
+        background-color:rgba($green, 0.8);  
+      }
+    } // data-role="signup"
 
-  .top-radius {
-    input[type="text"] {
+     [data-role="enter"] {
+      font-weight:$ultra-bold;
+      color:$white;
+      font-size:2em;
+      width:100%;
+      @include border-radius(10px);
+      background-color:$red;
+      border:0;
+      text-transform:uppercase;
+      margin:15px 0;
 
-    }
-  }
+      &:hover {
+        background-color:rgba($red, 0.8);  
+      }
+    } // data-role="Enter"
+
 
 } // sign-up
 
@@ -846,7 +960,9 @@ footer {
 
 /* Developer style sheet */
 
-
+.dev {
+  border:1px solid $green
+}
 
 
 
