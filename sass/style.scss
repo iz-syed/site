@@ -714,14 +714,14 @@ footer {
           @include breakpoint(below-tab) {
             padding-left:0;
             padding-right:0;    
-          }
+          } // max width 767
 
         input {
           @include border-radius(0);
           font-weight:$ultra-bold;
           padding-top:15px;
           padding-bottom:15px;
-        }
+        } // input
 
         select {
           background:$white;
@@ -729,7 +729,7 @@ footer {
           margin:0;
           padding-top:15px;
           padding-bottom:15px;
-        }
+        } // select
 
         .top-radius {
           input[type="text"] {
@@ -742,7 +742,7 @@ footer {
           input[type="password"] {
             @include border-bottom-radius(10px);
             width:99%;
-          }
+          } // input
         } // top-radius
 
         .dob-picker {
@@ -761,21 +761,21 @@ footer {
             .first {
                 select{
                   @include border-left-radius(10px);
-                }
-            }
+                } // select
+            } // first
 
             .last {
                 select{
                   @include border-right-radius(10px);
-                }
-            }
+                } // select
+            } // last
 
             label {
               display:block;
               color:$white;
               font-weight:$ultra-bold;
               margin:15px 0;
-            }
+            } // last
 
         } // dob-picker
 
@@ -785,16 +785,16 @@ footer {
           font-weight:$ultra-bold;
           margin:15px 0;
           text-decoration:underline;
-        }
+        } // forgot-pass
     }
 
     h2 {
       font-weight:$ultra-bold;
       color:$white;
       text-align: center;
-      span {
-        font-weight: $regular;
-      }
+        span {
+          font-weight: $regular;
+        } // span
 
     } // h2
 
@@ -802,7 +802,7 @@ footer {
       color:$white;
       text-align: center;
       font-weight: $regular;
-    }
+    } // h3
 
     [data-role="signup"] {
       font-weight:$ultra-bold;
@@ -817,7 +817,7 @@ footer {
 
       &:hover {
         background-color:rgba($green, 0.8);  
-      }
+      } // data-role="signup":hover
     } // data-role="signup"
 
      [data-role="enter"] {
@@ -838,6 +838,59 @@ footer {
 
 
 } // sign-up
+
+.step-two{
+  max-width:750px;
+    h3 {
+      color:$white;
+      font-weight:$regular;
+      text-align:center;
+      font-size:1.5em;
+    } // h3
+
+    .watch-video {
+        display:block;
+        color:$white;
+        font-weight:$ultra-bold;
+        margin:15px 0;
+        text-decoration:underline;
+
+    }
+
+} // step-two
+
+.walkthrough-video {
+  margin:15px 0;
+
+    .video-cover {
+      border:2px solid $white;
+    }
+
+}
+
+.normal-radius {
+  
+}
+
+.empty-cell {
+  padding:30px 0;
+}
+
+[data-role="skip"] {
+      font-weight:$ultra-bold;
+      color:$white;
+      font-size:2em;
+      width:100%;
+      @include border-radius(10px);
+      background-color:$red;
+      border:0;
+      text-transform:uppercase;
+      margin:15px 0;
+
+      &:hover {
+        background-color:rgba($red, 0.8);  
+      }
+}
 
 // Theme edit
 .nav-bar {
@@ -960,9 +1013,7 @@ footer {
 
 /* Developer style sheet */
 
-.dev {
-  border:1px solid $green
-}
+
 
 
 
