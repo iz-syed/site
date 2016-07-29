@@ -58,8 +58,8 @@
 /*================ Typography ================*/
 @font-face {
   font-family: 'icons';
-  src: url("../fonts/icons.eot?190903396877404422");
-  src: url("../fonts/icons.eot?190903396877404422#iefix") format("embedded-opentype"), url("../fonts/icons.woff?190903396877404422") format("woff"), url("../fonts/icons.ttf?190903396877404422") format("truetype"), url("../fonts/icons.svg?190903396877404422#timber-icons") format("svg");
+  src: url("icons.eot?190903396877404422");
+  src: url("icons.eot?190903396877404422#iefix") format("embedded-opentype"), url("icons.woff?190903396877404422") format("woff"), url("icons.ttf?190903396877404422") format("truetype"), url("icons.svg?190903396877404422#timber-icons") format("svg");
   font-weight: normal;
   font-style: normal;
 }
