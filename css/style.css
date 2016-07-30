@@ -8356,7 +8356,7 @@ header {
 header .logo-wrapper {
   text-align: center;
 }
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   header .h-nav {
     text-align: right;
   }
@@ -8494,12 +8494,6 @@ header .h-nav li a {
   display: block;
   border: 2px solid transparent;
   padding: 15px 0;
-}
-.product-wrapper figure a:hover {
-  border-color: rgba(255, 255, 255, 0.8);
-  -moz-border-radius: 20px;
-  -webkit-border-radius: 20px;
-  border-radius: 20px;
 }
 
 .orange-light {
@@ -9022,6 +9016,27 @@ footer .copyright p:not(.copy-text) {
 }
 [data-role="skip"]:hover {
   background-color: rgba(214, 16, 7, 0.8);
+}
+
+.mixology h3, .mixology .h3 {
+  font-weight: 900;
+  border-bottom: 1px solid #7cbc0d;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+.mixology ul li b {
+  font-weight: 900;
+  color: #000000;
+  display: block;
+}
+.mixology ul li span {
+  position: relative;
+  display: inline-block;
+  padding-right: 10px;
+  font-family: 400;
+}
+.mixology ul li span:before {
+  content: "#";
 }
 
 .nav-bar {

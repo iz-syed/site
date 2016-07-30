@@ -129,7 +129,7 @@ body {
 
     .h-nav {
       
-      @include breakpoint(tab-min) {
+      @include breakpoint(before-tab) {
           text-align:right;
       } // max width 768
 
@@ -299,10 +299,10 @@ body {
       display: block;
       border:2px solid transparent;
       padding:15px 0;
-      &:hover {
-        border-color: rgba($white, 0.8);
-        @include border-radius(20px);
-      }
+      // &:hover {
+      //   border-color: rgba($white, 0.8);
+      //   @include border-radius(20px);
+      // }
     }
 
   }
@@ -891,6 +891,38 @@ footer {
         background-color:rgba($red, 0.8);  
       }
 }
+
+// Flavors
+
+.mixology {
+  h3{
+    font-weight:$ultra-bold;
+    border-bottom:1px solid $green;
+    padding-bottom:10px;
+    margin-bottom:10px;
+  } // h3
+  ul{
+    li{
+      
+      b {
+        font-weight:$ultra-bold;
+        color:$black;
+        display: block;
+      } // b
+
+      span {
+        position: relative;
+        display: inline-block;
+        padding-right: 10px;
+        font-family:$regular;
+
+        &:before {
+          content:"#";
+        } // span:before
+      } // span
+    } // li
+  } // ul
+} // mixology
 
 // Theme edit
 .nav-bar {

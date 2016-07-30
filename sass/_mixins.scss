@@ -8,6 +8,11 @@
     @media (min-width: 992px) { @content; }
   }
 
+  @else if $point == before-tab {
+    @media (min-width: 769px)  { @content; }
+  }
+
+
   @else if $point == tab-min {
     @media (min-width: 768px)  { @content; }
   }
