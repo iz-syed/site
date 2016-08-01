@@ -559,17 +559,6 @@ a.mixing {
     padding:100px 0; // temporary fix
   } // testimonial
 
-  .join-now {
-        color:$white;
-        background-color: $green;
-        @include border-radius(10px);
-        padding:25px 60px;
-        font-weight:$ultra-bold;
-        font-size:30px;
-        margin-top: 25px;
-        display: inline-block;
-      } // a  // join now
-
 
   &:before {
     content:"";
@@ -923,6 +912,92 @@ footer {
     } // li
   } // ul
 } // mixology
+
+
+// how-it-works
+.how-it-works {
+  
+  .magento-light {
+    position: relative;
+    padding-bottom: 0;
+
+    &:before {
+        content:"";
+        position: absolute;
+        background-color:$black;
+        width:100%;
+        height:150px;
+        display: block;
+        bottom:0;
+        // z-index: -1;
+
+    }
+  } // magento-light
+
+  .orange-light{
+
+    .orange-info {
+      padding-top:50px;
+      padding-bottom:50px;
+      
+      .syed {
+        border:0;
+      }
+      &.title {
+        border:1px solid red;
+      }
+    } // orange-info
+
+    &:before {
+      bottom: inherit;
+      top:0;
+    } // orange light:before
+
+    .medium {
+        max-width: 300px;
+    } // medium
+
+  } // orange light
+
+  .title{
+    h3{
+      color:$white;
+    } // h3
+  } // title
+
+  .flavor-1k {
+    max-width:400px;
+      @include breakpoint(tab-min) {
+        padding-top:40px;
+      } // min width 768 px
+
+    p {
+      color: $white;
+      font-weight:$regular;
+      font-size:22px;
+      margin:15px 0;
+    }  // p
+  } // flavor-1k
+
+} // how-it-works
+
+
+// .v-centre {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+
+// }
+.join-now {
+        color:$white;
+        background-color: $green;
+        @include border-radius(10px);
+        padding:25px 60px;
+        font-weight:$ultra-bold;
+        font-size:30px;
+        margin-top: 25px;
+        display: inline-block;
+      } // a  // join now
 
 // Theme edit
 .nav-bar {
