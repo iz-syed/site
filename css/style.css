@@ -8370,7 +8370,8 @@ header .h-nav li a {
   font-weight: 900;
   color: #ffffff;
   font-size: 18px;
-  padding: 0 10px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .static-video {
@@ -8734,7 +8735,7 @@ footer {
   padding: 30px 0;
   position: relative;
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   footer .footer-logo {
     text-align: center;
   }
@@ -8742,7 +8743,7 @@ footer {
 footer .footer-links {
   text-align: center;
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   footer .footer-links {
     border: 1px solid #ffffff;
     border-right: 0;
@@ -8756,7 +8757,7 @@ footer .footer-links li {
   margin: 0 5px;
   padding: 65px 0;
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   footer .footer-links li {
     padding-top: 5px;
     padding-bottom: 5px;
@@ -8773,7 +8774,7 @@ footer .footer-links li a {
     text-align: right;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   footer .footer-socials {
     text-align: center;
   }
@@ -8783,7 +8784,7 @@ footer .footer-socials li {
   margin: 0 10px;
   padding: 60px 0;
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   footer .footer-socials li {
     padding: 10px 0;
   }
@@ -8801,7 +8802,7 @@ footer .copyright {
     top: -35px;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   footer .copyright p.copy-text {
     text-align: center;
   }
@@ -9012,18 +9013,18 @@ footer .copyright p:not(.copy-text) {
   padding-bottom: 10px;
   margin-bottom: 10px;
 }
-.mixology ul li b {
+.mixology ul.mixology-list li b {
   font-weight: 900;
   color: #000000;
   display: block;
 }
-.mixology ul li span {
+.mixology ul.mixology-list li span {
   position: relative;
   display: inline-block;
   padding-right: 10px;
   font-family: 400;
 }
-.mixology ul li span:before {
+.mixology ul.mixology-list li span:before {
   content: "#";
 }
 
@@ -9091,6 +9092,36 @@ footer .copyright p:not(.copy-text) {
   font-size: 30px;
   margin-top: 25px;
   display: inline-block;
+}
+
+.back-link {
+  text-align: center;
+  padding: 50px 0;
+}
+.back-link a {
+  font-weight: 900;
+  font-size: 2.1em;
+  line-height: 1.2em;
+  color: #000000;
+  background: url(../images/back-btn.png) no-repeat left center;
+  padding-left: 50px;
+  background-size: 30px;
+}
+
+.form-search {
+  position: relative;
+}
+.form-search [type="text"] {
+  padding-left: 30px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  border-color: #000000;
+}
+.form-search .search-submit {
+  position: absolute;
+  top: 10px;
+  left: 10px;
 }
 
 .nav-bar {
