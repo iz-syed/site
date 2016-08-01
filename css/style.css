@@ -9040,15 +9040,20 @@ footer .copyright p:not(.copy-text) {
   display: block;
   bottom: 0;
 }
+.how-it-works .orange-light {
+  padding-bottom: 50px;
+}
+@media (min-width: 768px) {
+  .how-it-works .orange-light {
+    padding-bottom: 100px;
+  }
+}
 .how-it-works .orange-light .orange-info {
   padding-top: 50px;
   padding-bottom: 50px;
 }
-.how-it-works .orange-light .orange-info .syed {
-  border: 0;
-}
-.how-it-works .orange-light .orange-info.title {
-  border: 1px solid red;
+.how-it-works .orange-light .orange-info .title {
+  padding-bottom: 50px;
 }
 .how-it-works .orange-light:before {
   bottom: inherit;
