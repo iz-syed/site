@@ -1427,11 +1427,74 @@ input[type=radio] + label, input[type=checkbox] + label {
 }
 
 
-
-.c-menu .center-block span:last-child::after{dispaly:none;background-color:#000;}
 // Vijay E
 
 // Durga S
+
+.scroll {
+  max-height:200px;
+  overflow-y: auto;
+  @include scrolling-shadows;
+  text-align: left;
+}
+
+.action-btns {
+    padding:15px 0;
+    text-align: center;
+  a {
+    color:$white;
+    font-weight:$ultra-bold;
+    font-size:1.2em;
+    text-align:center;
+    padding:15px 10px;
+    display: inline-block;
+    width:45%;
+    @include border-radius(10px);
+
+    &.action-danger {
+      background-color: $red;
+    }
+
+    &.action-success {
+      background-color: $green;
+    }
+  } // a
+}
+
+.add-flavor {
+  background: $white;
+  border: 1px solid #BDBDBD;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  max-height: 350px;
+  max-width: 460px;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  padding: 5px;
+  position: fixed;
+
+    p {
+      margin-bottom: 15px;
+    }
+  }
+
+
+.custom-popup + .pop-bg {
+  position:fixed;
+  background-color:rgba($black, 0.8);
+  width:100%;
+  height:100%;
+  z-index:99;
+}
+
+.flavour {
+    text-align: center;padding: 15px;
+}
+.close.popup-close{float: right;}
+
 // Durga E
 
 

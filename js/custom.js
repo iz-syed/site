@@ -6,7 +6,11 @@ $(document).ready(function () {
 
     // $('#home-video').parallax("50%", 0.3);
 
+    // Modal box close
+    
 
+
+$().alert('close');
 
 
 
