@@ -1,60 +1,28 @@
-$(document).ready(function () {
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>svg replace</title>
+</head>
 
-    // $(".player").mb_YTPlayer();
+<style> 
 
-    console.log('document.ready')
+svg {width: 350px; height: 350px; border:1px solid $green}
+svg path {fill: #000 !important;}
+</style>
 
-    // $('#home-video').parallax("50%", 0.3);
+<body>
 
-
-
-
-
-});
-
-
- $(window).resize( function () {
- 	console.log('window resize')
-});
-
-
- // Show less toggle
-
- $('ul.mixology-list').each(function(){
-
-	var LiN = $(this).find('li').length;
-
-	if( LiN > 3){    
-
-		$('li', this).eq(4).nextAll().hide().addClass('toggleable');
-
-		$(this).append('<li class="more"><a href="javascript:void(0)">View More...</a></li>');    
-
-		 // $(this).parent().append('<div class="more"><a href="javascript:void(0)">View More...</a></div>');
-
-	}
-});
-
- // Show less toggle text replacement
-$('ul.mixology-list').on('click','.more', function(){
-
-	if( $(this).hasClass('less') ){    
+	<div class="test">
 		
-		$(this).text('View More...').removeClass('less');    
-	}
+		<img class="svg" src="images/svg/Windows_logo_-_2012_(red).svg" alt="Microsoft" width="350" height="350">
 
-	else {
+		<img class="svg"  src="images/svg/bottle.svg" alt="">
 
-		$(this).text('Less More...').addClass('less'); 
-	}
-
-	$(this).siblings('li.toggleable').slideToggle();
-
-}); 
-
-
-// SVG Replace
-
+	</div>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script>
 $(function(){
     jQuery('img.svg').each(function(){
         var $img = jQuery(this);
@@ -90,10 +58,6 @@ $(function(){
     
     });
 });
-
-
-
-
-
-
-
+</script>
+</body>
+</html>

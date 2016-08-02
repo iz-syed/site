@@ -8444,7 +8444,7 @@ header .h-nav li a {
   padding-bottom: 150px;
   position: relative;
 }
-@media (max-width: 992px) {
+@media (max-width: 991px) {
   .magento-light {
     padding-top: 55px;
   }
@@ -8469,7 +8469,7 @@ header .h-nav li a {
   margin-top: -115px;
   position: relative;
 }
-@media (max-width: 992px) {
+@media (max-width: 991px) {
   .magento-light .magento-dark {
     margin-top: 0;
   }
@@ -8502,7 +8502,7 @@ header .h-nav li a {
   position: relative;
   z-index: 1;
 }
-@media (max-width: 992px) {
+@media (max-width: 991px) {
   .orange-light {
     padding-top: 55px;
   }
@@ -8511,7 +8511,7 @@ header .h-nav li a {
   text-align: center;
   margin-top: -115px;
 }
-@media (max-width: 992px) {
+@media (max-width: 991px) {
   .orange-light .save-drop {
     margin-top: 0;
   }
@@ -8525,7 +8525,7 @@ header .h-nav li a {
   padding-bottom: 35px;
   counter-reset: line;
 }
-@media (max-width: 992px) {
+@media (max-width: 991px) {
   .orange-light .orange-info {
     margin: 50px 0;
   }
@@ -8535,7 +8535,7 @@ header .h-nav li a {
   position: relative;
   text-align: center;
 }
-@media (max-width: 992px) {
+@media (max-width: 991px) {
   .orange-light .orange-info .box-column {
     margin-bottom: 50px;
   }
@@ -8551,7 +8551,7 @@ header .h-nav li a {
   line-height: 32px;
   color: #ffffff;
 }
-@media (max-width: 992px) {
+@media (max-width: 991px) {
   .orange-light .orange-info .box-column p br {
     display: none;
   }
@@ -9027,6 +9027,14 @@ footer .copyright p:not(.copy-text) {
 .mixology ul.mixology-list li span:before {
   content: "#";
 }
+.mixology ul.mixology-list li.more {
+  border-top: 1px solid #7cbc0d;
+  padding: 10px 0;
+  margin: 10px 0;
+  text-align: center;
+  cursor: pointer;
+  font-weight: 900;
+}
 
 .how-it-works .magento-light {
   position: relative;
@@ -9122,6 +9130,142 @@ footer .copyright p:not(.copy-text) {
   position: absolute;
   top: 10px;
   left: 10px;
+}
+
+.flavor-btn {
+  display: inline-block;
+  margin: 0 -2px;
+  background-color: #000000;
+  font-weight: 900;
+  text-align: center;
+  color: #ffffff;
+}
+@media (min-width: 992px) {
+  .flavor-btn {
+    width: 14.4%;
+    padding: 200px 0;
+  }
+}
+@media (max-width: 991px) {
+  .flavor-btn {
+    width: 100%;
+    padding: 50px 0;
+  }
+}
+.flavor-btn:hover {
+  color: #ffffff;
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+  -moz-box-shadow: rgba(0, 0, 0, 0.3) 1px 1px 10px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 1px 1px 10px;
+  box-shadow: rgba(0, 0, 0, 0.3) 1px 1px 10px;
+}
+
+.choose-color {
+  margin-left: 2px;
+  margin-top: 35px;
+  margin-bottom: 35px;
+}
+
+[data-bg="desserts"] {
+  background-color: #942a75;
+}
+[data-bg="desserts"]:hover {
+  background-color: #942a75;
+}
+
+[data-bg="fruits"] {
+  background-color: #b7150a;
+}
+[data-bg="fruits"]:hover {
+  background-color: #b7150a;
+}
+
+[data-bg="candies"] {
+  background-color: #d77824;
+}
+[data-bg="candies"]:hover {
+  background-color: #d77824;
+}
+
+[data-bg="cereals"] {
+  background-color: #dd9b2a;
+}
+[data-bg="cereals"]:hover {
+  background-color: #dd9b2a;
+}
+
+[data-bg="drinks"] {
+  background-color: #91ba2e;
+}
+[data-bg="drinks"]:hover {
+  background-color: #91ba2e;
+}
+
+[data-bg="mints"] {
+  background-color: #65b3c9;
+}
+[data-bg="mints"]:hover {
+  background-color: #65b3c9;
+}
+
+[data-bg="tobacco"] {
+  background-color: #78d2da;
+}
+[data-bg="tobacco"]:hover {
+  background-color: #78d2da;
+}
+
+.product-bottle span {
+  display: inline-block;
+}
+.product-bottle img, .product-bottle svg {
+  max-width: 75px;
+}
+
+[data-color="desserts"] {
+  color: #942a75;
+}
+[data-color="desserts"] svg path {
+  fill: #942a75 !important;
+}
+
+[data-color="red"] {
+  color: #d61007;
+}
+[data-color="red"] svg path {
+  fill: #d61007 !important;
+}
+
+[data-color="orange-light"] {
+  color: #f29d11;
+}
+[data-color="orange-light"] svg path {
+  fill: #f29d11 !important;
+}
+
+[data-color="blue-light"] {
+  color: #02d3db;
+}
+[data-color="blue-light"] svg path {
+  fill: #02d3db !important;
+}
+
+.step-back {
+  padding-left: 10px;
+  margin: 15px 0;
+}
+.step-back a {
+  background-image: url(../images/back-btn-white.png);
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 30px;
+  padding: 10px 10px 10px 50px;
+  display: block;
+  font-weight: 900;
+  color: #ffffff;
 }
 
 .nav-bar {
@@ -9235,3 +9379,98 @@ footer .copyright p:not(.copy-text) {
 }
 
 /* Developer style sheet */
+input[type=radio], input[type=checkbox] {
+  display: none;
+}
+
+input[type=radio] + label, input[type=checkbox] + label {
+  display: inline-block;
+  margin: -2px;
+  padding: 4px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  line-height: 20px;
+  color: #333;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  border-bottom-color: #b3b3b3;
+}
+
+input[type=radio]:checked + label, input[type=checkbox]:checked + label {
+  outline: 0;
+  background-color: #e0e0e0;
+}
+
+.choose-flavors input[type=radio] + label,
+.choose-flavors input[type=checkbox] + label {
+  padding: 14px;
+  font-size: 22px;
+  text-align: left;
+  background-color: #ffffff;
+  border-color: #000000;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  font-weight: 900;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  position: relative;
+}
+
+.choose-flavors input[type=radio] + label:before,
+.choose-flavors input[type=checkbox] + label:before {
+  content: "#";
+  padding-right: 10px;
+}
+
+.choose-flavors input[type=radio]:checked + label,
+.choose-flavors input[type=checkbox]:checked + label {
+  background-color: #9b226d;
+  color: #ffffff;
+}
+
+.choose-flavors .flavor label {
+  width: 100%;
+}
+
+.choose-flavors .flavor {
+  margin: 10px 0px;
+}
+
+.c-menu .center-block {
+  text-align: center;
+  margin: 12px 0 0;
+}
+.c-menu .center-block span {
+  background-color: #000000;
+  display: inline-block;
+  position: relative;
+  margin: 0 10px;
+  padding: 6px;
+}
+.c-menu .center-block span:after {
+  content: "";
+  height: 1px;
+  width: 80px;
+  background-color: #ffffff;
+  display: block;
+  position: absolute;
+  top: 60%;
+  z-index: -1;
+  left: 10px;
+}
+.c-menu .center-block span:last-child:after {
+  dispaly: none;
+  background-color: #000000;
+}
+
+.c-menu .center-block span:last-child::after {
+  dispaly: none;
+  background-color: #000;
+}

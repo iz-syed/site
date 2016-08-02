@@ -911,6 +911,15 @@ footer {
         } // span:before
       } // span
     } // li
+
+    li.more {
+      border-top:1px solid $green;
+      padding:10px 0;
+      margin:10px 0;
+      text-align: center;
+      cursor: pointer;
+      font-weight:$ultra-bold;
+    } // more
   } // ul
 } // mixology
 
@@ -1023,16 +1032,162 @@ footer {
     padding-left: 30px;
     @include border-radius(10px);
     border-color:$black;
-  }
+  } // input text
 
   .search-submit {
     position: absolute;
     top:10px;
     left:10px;
+  } // search-submit
+} // form-search
+
+
+.flavor-btn {
+  display: inline-block;
+    
+    @include breakpoint(desktop) {
+      width:14.4%;
+      padding: 200px 0;
+    }
+    @include breakpoint(half-hd) {
+      width:100%;
+      padding: 50px 0;
+    }
+
+  margin: 0 -2px;
+  background-color: $black;
+  font-weight:$ultra-bold;
+  text-align: center;
+  color: $white;
+
+  &:hover {
+    color:$white;
+    // transform: scale(1.1);
+    @include transform(scale(1.1));
+    // box-shadow:1px 1px 5px rgba(0,0,0,0.3);
+    @include box-shadow(rgba($black, 0.3) 1px 1px 10px);
+    // 
   }
 }
 
+.choose-color {
+  margin-left:2px;
+  margin-top:35px;
+  margin-bottom:35px;
+} // choose color
 
+// Product bg colors Start
+  [data-bg="desserts"] { 
+      background-color: $desserts;
+      &:hover {
+      background-color: rgba($desserts, 1);  
+      } // desserts: hover
+    } // bg | desserts
+  
+  [data-bg="fruits"] {
+      background-color:$fruits;
+      &:hover {
+      background-color: rgba($fruits, 1);  
+      } // fruits:  hover
+  } // bg | fruits
+
+  [data-bg="candies"] {
+      background-color:$candies;
+      &:hover {
+      background-color: rgba($candies, 1);  
+      } // candies: hover
+  } // bg | candies
+
+  [data-bg="cereals"] {
+      background-color:$cereals;
+      &:hover {
+      background-color: rgba($cereals, 1);  
+      } // cereals: hover
+  } // bg | cereals
+
+  [data-bg="drinks"] {
+      background-color:$drinks;
+      &:hover {
+      background-color: rgba($drinks, 1);  
+      } // drinsk: hover
+  } // bg | drinsk
+
+  [data-bg="mints"] {
+      background-color:$mints;
+      &:hover {
+      background-color: rgba($mints, 1);  
+      } // mints: hover
+  } // bg | mints
+
+  [data-bg="tobacco"] {
+      background-color:$tobacco;
+      &:hover {
+      background-color: rgba($tobacco, 1);  
+      } // tobacco :hover
+  } // bg | tobacco
+// Product bg colors End
+
+.product-bottle {
+  span {
+    display: inline-block;
+
+  } // span
+
+  img, svg {
+    max-width:75px;
+  } // img, svg
+
+} // product-bottle
+
+[data-color="desserts"] {
+  color:$desserts;
+  svg path {
+    fill: $desserts !important;
+  }
+} // svg desserts color 1
+
+[data-color="red"] {
+  color:$red;
+  svg path {
+    fill: $red !important;
+  }
+} // svg desserts color 2
+
+[data-color="orange-light"] {
+  color:$orange-light;
+  svg path {
+    fill: $orange-light !important;
+  }
+} // svg desserts color 3
+
+[data-color="blue-light"] {
+  color:$blue-light;
+  svg path {
+    fill: $blue-light !important;
+  }
+} // svg desserts color 4
+
+
+.step-back {
+  padding-left:10px;
+  margin:15px 0;
+    a {
+    background-image: url(../images/back-btn-white.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size:30px;
+    padding:10px 10px 10px 50px;
+      display: block;
+      font-weight:$ultra-bold;
+      color:$white;
+    }
+}
+
+
+
+
+
+// svg path {fill: #000 !important;}
 
 // Theme edit
 .nav-bar {
@@ -1155,6 +1310,129 @@ footer {
 
 /* Developer style sheet */
 
+
+// Global Start
+input[type=radio], input[type=checkbox] {
+    display:none;
+  }
+
+input[type=radio] + label, input[type=checkbox] + label {
+    display:inline-block;
+    margin:-2px;
+    padding: 4px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    line-height: 20px;
+    color: #333;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+    border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
+    border-bottom-color: #b3b3b3;
+    
+  }
+
+   input[type=radio]:checked + label, input[type=checkbox]:checked + label{
+    outline: 0;
+      background-color:#e0e0e0;
+  }
+// Global End
+
+// Vijay S
+  
+  .choose-flavors {
+    .col-sm-4 {
+      // @include breakpoint(tab-min){
+      //   border:1px solid red;
+      // }
+    }
+  }
+
+  .choose-flavors {}
+  .choose-flavors {}
+
+  .choose-flavors input[type=radio] + label, 
+  .choose-flavors input[type=checkbox] + label {
+  
+    padding: 14px;
+    font-size: 22px;    
+    text-align: left;
+    background-color: $white;
+    border-color: $black;
+    @include border-radius(10px);
+    font-weight:$ultra-bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: relative;
+  }
+
+  .choose-flavors input[type=radio] + label:before, 
+  .choose-flavors input[type=checkbox] + label:before {
+    content: "#";
+    padding-right:10px;
+  }
+
+
+  .choose-flavors input[type=radio]:checked + label, 
+  .choose-flavors input[type=checkbox]:checked + label{
+    background-color: $magento-dark;
+    color: $white;
+  }
+  
+  .choose-flavors .flavor label{
+    width:100%;
+  }
+
+  .choose-flavors .flavor {
+    margin: 10px 0px;
+}
+
+// C Nav
+.c-menu {
+  .center-block{
+      text-align:center;
+      margin:12px 0 0;
+
+        span {
+        background-color:$black;
+        display:inline-block;
+        position: relative; 
+        margin:0 10px;
+        padding:6px;
+
+          &:after {
+            content:"";
+            height:1px;
+            width:80px;
+            background-color:$white;
+            display:block;
+            position: absolute;
+            top: 60%;
+            z-index: -1;
+            left:10px;
+
+          } // span:after
+
+          &:last-child:after {
+            dispaly:none;
+            background-color:$black;
+          } // last-chile | after
+        } // span
+
+    } // center-block
+}
+
+
+
+.c-menu .center-block span:last-child::after{dispaly:none;background-color:#000;}
+// Vijay E
+
+// Durga S
+// Durga E
 
 
 
