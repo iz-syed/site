@@ -1230,6 +1230,305 @@ footer {
 
 }
 
+.cforms {
+  input[type=radio], 
+  input[type=checkbox] {
+      display:none;
+    } // input Radio | Checkbox
+
+      input[type=radio] + label, 
+      input[type=checkbox] + label {
+          display:inline-block;
+          margin:-2px;
+          padding: 4px 12px;
+          margin-bottom: 0;
+          font-size: 14px;
+          line-height: 20px;
+          color: $black;
+          text-align: center;
+          vertical-align: middle;
+          cursor: pointer;
+          background-color: $white;
+          border: 1px solid rgba($black, 0.5);
+          border-color: #e6e6e6;
+          border-color: rgba(0,0,0,0.1);
+          border-bottom-color: #b3b3b3;
+      } // input + Label
+
+        input[type=radio]:checked + label, 
+        input[type=checkbox]:checked + label {
+          outline: 0;
+          background-color:#e0e0e0;
+        } // if checked + label
+} // cforms
+
+  .choose-flavors {
+    .col-sm-4 {
+      // @include breakpoint(tab-min){
+      //   border:1px solid red;
+      // }
+    }
+  }
+
+  .choose-flavors {}
+  .choose-flavors {}
+
+  .choose-flavors input[type=radio] + label, 
+  .choose-flavors input[type=checkbox] + label {
+  
+    padding: 14px;
+    font-size: 22px;    
+    text-align: left;
+    background-color: $white;
+    border-color: $black;
+    @include border-radius(10px);
+    font-weight:$ultra-bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: relative;
+  }
+
+  .choose-flavors input[type=radio] + label:before, 
+  .choose-flavors input[type=checkbox] + label:before {
+    content: "#";
+    padding-right:10px;
+  }
+
+
+  .choose-flavors input[type=radio]:checked + label, 
+  .choose-flavors input[type=checkbox]:checked + label{
+    background-color: $magento-dark;
+    color: $white;
+  }
+  
+  .choose-flavors .flavor label{
+    width:100%;
+  }
+
+  .choose-flavors .flavor {
+    margin: 10px 0px;
+}
+
+.c-menu {
+  .center-block{
+      text-align:center;
+      margin:12px 0 0;
+
+        span {
+        background-color:$black;
+        display:inline-block;
+        position: relative; 
+        margin:0 8px;
+        padding:6px;
+
+          a {
+            img, svg {
+              max-width:55px;
+              max-height:55px;
+                @include breakpoint(below-tab){ 
+                  max-width:30px;
+                  max-height:30px;    
+                }
+
+            }
+          }
+
+          &[data-color="tobacco"] {
+              svg path {
+                 fill: $tobacco;
+               }
+            }
+
+            &[data-color="green"] {
+              svg path {
+                 fill: $green;
+               }
+            }
+
+            &[data-color="orange-light"] {
+              svg path {
+                 fill: $orange-light;
+               }
+            }
+
+            &[data-color="red"] {
+              svg path {
+                 fill: $red;
+               }
+            }
+
+          
+
+          &:after {
+            content:"";
+            height:1px;
+            width:80px;
+            background-color:$white;
+            display:block;
+            position: absolute;
+            top: 51%;
+            z-index: -1;
+            left:10px;
+
+          } // span:after
+
+            &:last-child:after {
+              dispaly:none;
+              background-color:$black;
+            } // last-chile | after
+
+
+            
+        } // span
+
+    } // center-block
+}
+
+.scroll {
+  max-height:200px;
+  overflow-y: auto;
+  @include scrolling-shadows;
+  text-align: left;
+}
+
+.action-btns {
+    padding:15px 0;
+    text-align: center;
+      a {
+        color:$white;
+        font-weight:$ultra-bold;
+        font-size:1.2em;
+        text-align:center;
+        padding:15px 10px;
+        display: inline-block;
+        width:45%;
+        @include border-radius(10px);
+
+          &.action-danger {
+            background-color: $red;
+          } // action-danger
+
+            &.action-success {
+              background-color: $green;
+            } // action-success
+      } // a
+}
+
+.add-flavor {
+  background: $white;
+  border: 1px solid #BDBDBD;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  max-height: 350px;
+  max-width: 460px;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  padding: 5px;
+  position: fixed;
+
+    p {
+      margin-bottom: 15px;
+    } // p
+  } // add-flavor
+
+
+.custom-popup + .pop-bg {
+  position:fixed;
+  background-color:rgba($black, 0.8);
+  width:100%;
+  height:100%;
+  z-index:99;
+} // custom-popup + .pop-bg
+
+.flavour {
+    text-align: center;padding: 15px;
+} // flavour
+
+.close.popup-close{
+  float: right;
+} // close.popup-close
+
+//
+.nicotine-level {
+    margin: 50px auto;
+    text-align: center;
+
+      input[type=radio] + label{
+          font-size: 16px;
+          border: 1px solid $black;
+          font-weight: bold;
+          margin:5px;
+          width: 80px;
+          box-shadow: none;
+          background: $white;
+          line-height: 70px;
+      } // input + label
+
+      input[type=radio]:checked + label {
+          background-color:$orange-dark; 
+          color: $white; 
+      } // input:checked + label
+} // nicotine-level
+
+//
+
+.intense-left, .intense-right {
+  display: inline-block;
+  padding:10px;
+  margin:10px;
+
+    h4 {
+      border-bottom:1px solid $black;
+      padding-bottom: 5px;
+      margin-bottom: 20px;
+      position: relative;
+
+        &:before, &:after {
+         content:"";
+         position: absolute;
+         width:1px;
+         height:15px;
+         bottom:-15px;
+         background-color: $black;
+        } // before & after
+
+        &:before {
+          left:0;
+        } // before
+
+        &:after {
+          right:0;
+        } // after
+    } // h4
+}
+
+// Animation
+
+/* Add Animation */
+.custom-popup {
+   -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+@-webkit-keyframes animatetop {
+    // from {top:-300px; opacity:0}
+    // to {top:0; opacity:1}
+
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+     from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+// Animation 
 
 // Theme edit
 .nav-bar {
@@ -1353,255 +1652,8 @@ footer {
 /* Developer style sheet */
 
 
-// Global Start
-.cforms {
-
-  input[type=radio], 
-  input[type=checkbox] {
-      display:none;
-    } // input Radio | Checkbox
-
-  input[type=radio] + label, 
-  input[type=checkbox] + label {
-      display:inline-block;
-      margin:-2px;
-      padding: 4px 12px;
-      margin-bottom: 0;
-      font-size: 14px;
-      line-height: 20px;
-      color: $black;
-      text-align: center;
-      vertical-align: middle;
-      cursor: pointer;
-      background-color: $white;
-      border: 1px solid rgba($black, 0.5);
-      border-color: #e6e6e6;
-      border-color: rgba(0,0,0,0.1);
-      border-bottom-color: #b3b3b3;
-  } // input + Label
-
-  input[type=radio]:checked + label, 
-  input[type=checkbox]:checked + label{
-    outline: 0;
-    background-color:#e0e0e0;
-  } // if checked + label
 
 
-}
-
-
-
-   
-// Global End
-
-// Vijay S
-  
-  .choose-flavors {
-    .col-sm-4 {
-      // @include breakpoint(tab-min){
-      //   border:1px solid red;
-      // }
-    }
-  }
-
-  .choose-flavors {}
-  .choose-flavors {}
-
-  .choose-flavors input[type=radio] + label, 
-  .choose-flavors input[type=checkbox] + label {
-  
-    padding: 14px;
-    font-size: 22px;    
-    text-align: left;
-    background-color: $white;
-    border-color: $black;
-    @include border-radius(10px);
-    font-weight:$ultra-bold;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    position: relative;
-  }
-
-  .choose-flavors input[type=radio] + label:before, 
-  .choose-flavors input[type=checkbox] + label:before {
-    content: "#";
-    padding-right:10px;
-  }
-
-
-  .choose-flavors input[type=radio]:checked + label, 
-  .choose-flavors input[type=checkbox]:checked + label{
-    background-color: $magento-dark;
-    color: $white;
-  }
-  
-  .choose-flavors .flavor label{
-    width:100%;
-  }
-
-  .choose-flavors .flavor {
-    margin: 10px 0px;
-}
-
-// C Nav
-.c-menu {
-  .center-block{
-      text-align:center;
-      margin:12px 0 0;
-
-        span {
-        background-color:$black;
-        display:inline-block;
-        position: relative; 
-        margin:0 10px;
-        padding:6px;
-
-          &:after {
-            content:"";
-            height:1px;
-            width:80px;
-            background-color:$white;
-            display:block;
-            position: absolute;
-            top: 60%;
-            z-index: -1;
-            left:10px;
-
-          } // span:after
-
-          &:last-child:after {
-            dispaly:none;
-            background-color:$black;
-          } // last-chile | after
-        } // span
-
-    } // center-block
-}
-
-
-// Vijay E
-
-// Durga S
-
-.scroll {
-  max-height:200px;
-  overflow-y: auto;
-  @include scrolling-shadows;
-  text-align: left;
-}
-
-.action-btns {
-    padding:15px 0;
-    text-align: center;
-      a {
-        color:$white;
-        font-weight:$ultra-bold;
-        font-size:1.2em;
-        text-align:center;
-        padding:15px 10px;
-        display: inline-block;
-        width:45%;
-        @include border-radius(10px);
-
-        &.action-danger {
-          background-color: $red;
-        } // action-danger
-
-        &.action-success {
-          background-color: $green;
-        } // action-success
-      } // a
-}
-
-.add-flavor {
-  background: $white;
-  border: 1px solid #BDBDBD;
-  bottom: 0;
-  left: 0;
-  margin: auto;
-  max-height: 350px;
-  max-width: 460px;
-  right: 0;
-  top: 0;
-  width: 100%;
-  z-index: 999;
-  padding: 5px;
-  position: fixed;
-
-    p {
-      margin-bottom: 15px;
-    }
-  }
-
-
-.custom-popup + .pop-bg {
-  position:fixed;
-  background-color:rgba($black, 0.8);
-  width:100%;
-  height:100%;
-  z-index:99;
-}
-
-.flavour {
-    text-align: center;padding: 15px;
-}
-.close.popup-close{float: right;}
-
-//
-.nicotine-level {
-    margin: 50px auto;
-    text-align: center;
-
-      input[type=radio] + label{
-          font-size: 16px;
-          border: 1px solid $black;
-          font-weight: bold;
-          margin:5px;
-          width: 80px;
-          box-shadow: none;
-          background: $white;
-          line-height: 70px;
-      } // input + label
-
-      input[type=radio]:checked + label {
-          background-color:$orange-dark; 
-          color: $white; 
-      } // input:checked + label
-} // nicotine-level
-
-//
-
-.intense-left, .intense-right {
-  display: inline-block;
-  padding:10px;
-  margin:10px;
-
-    h4 {
-      border-bottom:1px solid $black;
-      padding-bottom: 5px;
-      margin-bottom: 20px;
-      position: relative;
-
-        &:before, &:after {
-         content:"";
-         position: absolute;
-         width:1px;
-         height:15px;
-         bottom:-15px;
-         background-color: $black;
-        } // before & after
-
-        &:before {
-          left:0;
-        } // before
-
-        &:after {
-          right:0;
-        } // after
-    } // h4
-}
-// Durga E
 
 
 

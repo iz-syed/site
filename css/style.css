@@ -9311,117 +9311,6 @@ footer .copyright p:not(.copy-text) {
   height: 300px;
 }
 
-.nav-bar {
-  background-color: #000000;
-}
-
-.site-nav li a, .site-nav--mobile li a {
-  color: #ffffff;
-}
-.site-nav li a:hover, .site-nav--mobile li a:hover {
-  color: rgba(255, 255, 255, 0.8);
-}
-
-@media (max-width: 768px) {
-  .site-nav__link {
-    color: #ffffff;
-  }
-  .site-nav__link:hover {
-    color: #9b226d;
-  }
-}
-
-.site-nav--active > a {
-  border-bottom: 3px solid #ad2679;
-}
-
-.site-header[role="banner"] {
-  display: none;
-}
-
-/* Developer style sheet */
-.home-logo {
-  max-width: 160px;
-  margin-top: 7px;
-}
-
-.template-index {
-  color: #fff;
-}
-
-#privacy-policy #cms-title {
-  position: relative;
-}
-#privacy-policy #cms-title .grid__item h1, #privacy-policy #cms-title .grid__item .h1 {
-  background-color: #d61007;
-  color: #ffffff;
-  font-weight: 900;
-  padding: 85px 0;
-  text-align: center;
-  font-size: 62px;
-  margin-top: -30px;
-}
-@media (max-width: 767px) {
-  #privacy-policy #cms-title .grid__item h1, #privacy-policy #cms-title .grid__item .h1 {
-    font-size: 46px;
-    margin-top: 0;
-    padding: 45px 0;
-  }
-}
-#privacy-policy #cms-title:before {
-  position: absolute;
-  content: "";
-  color: #d61007;
-  width: 100%;
-  height: 270px;
-  background-color: #d61007;
-  top: -30px;
-}
-@media (max-width: 767px) {
-  #privacy-policy #cms-title:before {
-    height: 200px;
-  }
-}
-
-#terms-and-conditions #cms-title {
-  position: relative;
-}
-#terms-and-conditions #cms-title .grid__item h1, #terms-and-conditions #cms-title .grid__item .h1 {
-  background-color: #f29d11;
-  color: #ffffff;
-  font-weight: 900;
-  padding: 85px 0;
-  text-align: center;
-  font-size: 62px;
-  margin-top: -30px;
-}
-@media (max-width: 767px) {
-  #terms-and-conditions #cms-title .grid__item h1, #terms-and-conditions #cms-title .grid__item .h1 {
-    font-size: 46px;
-    margin-top: 0;
-    padding: 45px 0;
-  }
-}
-#terms-and-conditions #cms-title:before {
-  position: absolute;
-  content: "";
-  color: #f29d11;
-  width: 100%;
-  height: 270px;
-  background-color: #f29d11;
-  top: -30px;
-}
-@media (max-width: 767px) {
-  #terms-and-conditions #cms-title:before {
-    height: 200px;
-  }
-}
-
-.copyright p {
-  color: #fff;
-}
-
-/* Developer style sheet */
 .cforms input[type=radio],
 .cforms input[type=checkbox] {
   display: none;
@@ -9495,8 +9384,30 @@ footer .copyright p:not(.copy-text) {
   background-color: #000000;
   display: inline-block;
   position: relative;
-  margin: 0 10px;
+  margin: 0 8px;
   padding: 6px;
+}
+.c-menu .center-block span a img, .c-menu .center-block span a svg {
+  max-width: 55px;
+  max-height: 55px;
+}
+@media (max-width: 767px) {
+  .c-menu .center-block span a img, .c-menu .center-block span a svg {
+    max-width: 30px;
+    max-height: 30px;
+  }
+}
+.c-menu .center-block span[data-color="tobacco"] svg path {
+  fill: #78d2da;
+}
+.c-menu .center-block span[data-color="green"] svg path {
+  fill: #7cbc0d;
+}
+.c-menu .center-block span[data-color="orange-light"] svg path {
+  fill: #f29d11;
+}
+.c-menu .center-block span[data-color="red"] svg path {
+  fill: #d61007;
 }
 .c-menu .center-block span:after {
   content: "";
@@ -9505,7 +9416,7 @@ footer .copyright p:not(.copy-text) {
   background-color: #ffffff;
   display: block;
   position: absolute;
-  top: 60%;
+  top: 51%;
   z-index: -1;
   left: 10px;
 }
@@ -9629,3 +9540,143 @@ footer .copyright p:not(.copy-text) {
 .intense-left h4:after, .intense-left .h4:after, .intense-right h4:after, .intense-right .h4:after {
   right: 0;
 }
+
+/* Add Animation */
+.custom-popup {
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+}
+
+@-webkit-keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+.nav-bar {
+  background-color: #000000;
+}
+
+.site-nav li a, .site-nav--mobile li a {
+  color: #ffffff;
+}
+.site-nav li a:hover, .site-nav--mobile li a:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+@media (max-width: 768px) {
+  .site-nav__link {
+    color: #ffffff;
+  }
+  .site-nav__link:hover {
+    color: #9b226d;
+  }
+}
+
+.site-nav--active > a {
+  border-bottom: 3px solid #ad2679;
+}
+
+.site-header[role="banner"] {
+  display: none;
+}
+
+/* Developer style sheet */
+.home-logo {
+  max-width: 160px;
+  margin-top: 7px;
+}
+
+.template-index {
+  color: #fff;
+}
+
+#privacy-policy #cms-title {
+  position: relative;
+}
+#privacy-policy #cms-title .grid__item h1, #privacy-policy #cms-title .grid__item .h1 {
+  background-color: #d61007;
+  color: #ffffff;
+  font-weight: 900;
+  padding: 85px 0;
+  text-align: center;
+  font-size: 62px;
+  margin-top: -30px;
+}
+@media (max-width: 767px) {
+  #privacy-policy #cms-title .grid__item h1, #privacy-policy #cms-title .grid__item .h1 {
+    font-size: 46px;
+    margin-top: 0;
+    padding: 45px 0;
+  }
+}
+#privacy-policy #cms-title:before {
+  position: absolute;
+  content: "";
+  color: #d61007;
+  width: 100%;
+  height: 270px;
+  background-color: #d61007;
+  top: -30px;
+}
+@media (max-width: 767px) {
+  #privacy-policy #cms-title:before {
+    height: 200px;
+  }
+}
+
+#terms-and-conditions #cms-title {
+  position: relative;
+}
+#terms-and-conditions #cms-title .grid__item h1, #terms-and-conditions #cms-title .grid__item .h1 {
+  background-color: #f29d11;
+  color: #ffffff;
+  font-weight: 900;
+  padding: 85px 0;
+  text-align: center;
+  font-size: 62px;
+  margin-top: -30px;
+}
+@media (max-width: 767px) {
+  #terms-and-conditions #cms-title .grid__item h1, #terms-and-conditions #cms-title .grid__item .h1 {
+    font-size: 46px;
+    margin-top: 0;
+    padding: 45px 0;
+  }
+}
+#terms-and-conditions #cms-title:before {
+  position: absolute;
+  content: "";
+  color: #f29d11;
+  width: 100%;
+  height: 270px;
+  background-color: #f29d11;
+  top: -30px;
+}
+@media (max-width: 767px) {
+  #terms-and-conditions #cms-title:before {
+    height: 200px;
+  }
+}
+
+.copyright p {
+  color: #fff;
+}
+
+/* Developer style sheet */
