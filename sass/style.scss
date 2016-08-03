@@ -20,6 +20,7 @@
 // Custom Variables & mixins
 @import "variables";
 @import "mixins";
+@import "images";
 // Responsive
 // @import "custom-responsive";
 // Compass
@@ -893,6 +894,7 @@ footer {
   } // h3
   ul.mixology-list{
     li{
+        padding:10px 0;
       
       b {
         font-weight:$ultra-bold;
@@ -1017,6 +1019,11 @@ footer {
   a {
     font-weight:$ultra-bold;
     font-size:2.1em;
+    
+      @include breakpoint(below-tab) {
+        font-size:1.4em;
+      } 
+
     line-height: 1.2em;
     color:$black;
     background: url(../images/back-btn.png) no-repeat left center;
@@ -1128,10 +1135,14 @@ footer {
 // Product bg colors End
 
 .product-bottle {
-  span {
-    display: inline-block;
 
-  } // span
+    @include breakpoint(below-tab) {
+      text-align: center;
+    } // min width 767
+
+    span {
+      display: inline-block;
+    } // span
 
   img, svg {
     max-width:75px;
@@ -1146,10 +1157,10 @@ footer {
   }
 } // svg desserts color 1
 
-[data-color="red"] {
-  color:$red;
+[data-color="fruits"] {
+  color:$fruits;
   svg path {
-    fill: $red !important;
+    fill: $fruits !important;
   }
 } // svg desserts color 2
 
@@ -1184,10 +1195,41 @@ footer {
 }
 
 
+.change-selection {
+  padding:50px 0;
 
+  @include breakpoint(tab-min) {
+    padding:150px 0;
+  }
 
+  h3, h4 {
+    font-weight:$ultra-bold;
+  }
+
+  a.next {
+    color:$white;
+    background-color: $green;
+    @include border-radius(10px);
+    padding:25px 80px;
+    font-weight:$ultra-bold;
+    font-size:30px;
+    margin-top: 25px;
+    display: inline-block;
+  } // a  // join now.
+}
 
 // svg path {fill: #000 !important;}
+
+
+.stat {
+  // background:url($back-btn-white);
+  border:1px solid $green;
+  width:300px;
+  height:300px;
+
+
+}
+
 
 // Theme edit
 .nav-bar {
@@ -1312,33 +1354,44 @@ footer {
 
 
 // Global Start
-input[type=radio], input[type=checkbox] {
-    display:none;
-  }
+.cforms {
 
-input[type=radio] + label, input[type=checkbox] + label {
-    display:inline-block;
-    margin:-2px;
-    padding: 4px 12px;
-    margin-bottom: 0;
-    font-size: 14px;
-    line-height: 20px;
-    color: #333;
-    text-align: center;
-    vertical-align: middle;
-    cursor: pointer;
-    background-color: #f5f5f5;
-    border: 1px solid #ccc;
-    border-color: #e6e6e6 #e6e6e6 #bfbfbf;
-    border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
-    border-bottom-color: #b3b3b3;
-    
-  }
+  input[type=radio], 
+  input[type=checkbox] {
+      display:none;
+    } // input Radio | Checkbox
 
-   input[type=radio]:checked + label, input[type=checkbox]:checked + label{
+  input[type=radio] + label, 
+  input[type=checkbox] + label {
+      display:inline-block;
+      margin:-2px;
+      padding: 4px 12px;
+      margin-bottom: 0;
+      font-size: 14px;
+      line-height: 20px;
+      color: $black;
+      text-align: center;
+      vertical-align: middle;
+      cursor: pointer;
+      background-color: $white;
+      border: 1px solid rgba($black, 0.5);
+      border-color: #e6e6e6;
+      border-color: rgba(0,0,0,0.1);
+      border-bottom-color: #b3b3b3;
+  } // input + Label
+
+  input[type=radio]:checked + label, 
+  input[type=checkbox]:checked + label{
     outline: 0;
-      background-color:#e0e0e0;
-  }
+    background-color:#e0e0e0;
+  } // if checked + label
+
+
+}
+
+
+
+   
 // Global End
 
 // Vijay S
@@ -1441,24 +1494,24 @@ input[type=radio] + label, input[type=checkbox] + label {
 .action-btns {
     padding:15px 0;
     text-align: center;
-  a {
-    color:$white;
-    font-weight:$ultra-bold;
-    font-size:1.2em;
-    text-align:center;
-    padding:15px 10px;
-    display: inline-block;
-    width:45%;
-    @include border-radius(10px);
+      a {
+        color:$white;
+        font-weight:$ultra-bold;
+        font-size:1.2em;
+        text-align:center;
+        padding:15px 10px;
+        display: inline-block;
+        width:45%;
+        @include border-radius(10px);
 
-    &.action-danger {
-      background-color: $red;
-    }
+        &.action-danger {
+          background-color: $red;
+        } // action-danger
 
-    &.action-success {
-      background-color: $green;
-    }
-  } // a
+        &.action-success {
+          background-color: $green;
+        } // action-success
+      } // a
 }
 
 .add-flavor {
@@ -1495,6 +1548,59 @@ input[type=radio] + label, input[type=checkbox] + label {
 }
 .close.popup-close{float: right;}
 
+//
+.nicotine-level {
+    margin: 50px auto;
+    text-align: center;
+
+      input[type=radio] + label{
+          font-size: 16px;
+          border: 1px solid $black;
+          font-weight: bold;
+          margin:5px;
+          width: 80px;
+          box-shadow: none;
+          background: $white;
+          line-height: 70px;
+      } // input + label
+
+      input[type=radio]:checked + label {
+          background-color:$orange-dark; 
+          color: $white; 
+      } // input:checked + label
+} // nicotine-level
+
+//
+
+.intense-left, .intense-right {
+  display: inline-block;
+  padding:10px;
+  margin:10px;
+
+    h4 {
+      border-bottom:1px solid $black;
+      padding-bottom: 5px;
+      margin-bottom: 20px;
+      position: relative;
+
+        &:before, &:after {
+         content:"";
+         position: absolute;
+         width:1px;
+         height:15px;
+         bottom:-15px;
+         background-color: $black;
+        } // before & after
+
+        &:before {
+          left:0;
+        } // before
+
+        &:after {
+          right:0;
+        } // after
+    } // h4
+}
 // Durga E
 
 

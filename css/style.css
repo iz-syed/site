@@ -9013,6 +9013,9 @@ footer .copyright p:not(.copy-text) {
   padding-bottom: 10px;
   margin-bottom: 10px;
 }
+.mixology ul.mixology-list li {
+  padding: 10px 0;
+}
 .mixology ul.mixology-list li b {
   font-weight: 900;
   color: #000000;
@@ -9114,6 +9117,11 @@ footer .copyright p:not(.copy-text) {
   background: url(../images/back-btn.png) no-repeat left center;
   padding-left: 50px;
   background-size: 30px;
+}
+@media (max-width: 767px) {
+  .back-link a {
+    font-size: 1.4em;
+  }
 }
 
 .form-search {
@@ -9218,6 +9226,11 @@ footer .copyright p:not(.copy-text) {
   background-color: #78d2da;
 }
 
+@media (max-width: 767px) {
+  .product-bottle {
+    text-align: center;
+  }
+}
 .product-bottle span {
   display: inline-block;
 }
@@ -9232,11 +9245,11 @@ footer .copyright p:not(.copy-text) {
   fill: #942a75 !important;
 }
 
-[data-color="red"] {
-  color: #d61007;
+[data-color="fruits"] {
+  color: #b7150a;
 }
-[data-color="red"] svg path {
-  fill: #d61007 !important;
+[data-color="fruits"] svg path {
+  fill: #b7150a !important;
 }
 
 [data-color="orange-light"] {
@@ -9266,6 +9279,36 @@ footer .copyright p:not(.copy-text) {
   display: block;
   font-weight: 900;
   color: #ffffff;
+}
+
+.change-selection {
+  padding: 50px 0;
+}
+@media (min-width: 768px) {
+  .change-selection {
+    padding: 150px 0;
+  }
+}
+.change-selection h3, .change-selection .h3, .change-selection h4, .change-selection .h4 {
+  font-weight: 900;
+}
+.change-selection a.next {
+  color: #ffffff;
+  background-color: #7cbc0d;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  padding: 25px 80px;
+  font-weight: 900;
+  font-size: 30px;
+  margin-top: 25px;
+  display: inline-block;
+}
+
+.stat {
+  border: 1px solid #7cbc0d;
+  width: 300px;
+  height: 300px;
 }
 
 .nav-bar {
@@ -9379,29 +9422,30 @@ footer .copyright p:not(.copy-text) {
 }
 
 /* Developer style sheet */
-input[type=radio], input[type=checkbox] {
+.cforms input[type=radio],
+.cforms input[type=checkbox] {
   display: none;
 }
-
-input[type=radio] + label, input[type=checkbox] + label {
+.cforms input[type=radio] + label,
+.cforms input[type=checkbox] + label {
   display: inline-block;
   margin: -2px;
   padding: 4px 12px;
   margin-bottom: 0;
   font-size: 14px;
   line-height: 20px;
-  color: #333;
+  color: #000000;
   text-align: center;
   vertical-align: middle;
   cursor: pointer;
-  background-color: #f5f5f5;
-  border: 1px solid #ccc;
-  border-color: #e6e6e6 #e6e6e6 #bfbfbf;
-  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-color: #e6e6e6;
+  border-color: rgba(0, 0, 0, 0.1);
   border-bottom-color: #b3b3b3;
 }
-
-input[type=radio]:checked + label, input[type=checkbox]:checked + label {
+.cforms input[type=radio]:checked + label,
+.cforms input[type=checkbox]:checked + label {
   outline: 0;
   background-color: #e0e0e0;
 }
@@ -9539,4 +9583,49 @@ input[type=radio]:checked + label, input[type=checkbox]:checked + label {
 
 .close.popup-close {
   float: right;
+}
+
+.nicotine-level {
+  margin: 50px auto;
+  text-align: center;
+}
+.nicotine-level input[type=radio] + label {
+  font-size: 16px;
+  border: 1px solid #000000;
+  font-weight: bold;
+  margin: 5px;
+  width: 80px;
+  box-shadow: none;
+  background: #ffffff;
+  line-height: 70px;
+}
+.nicotine-level input[type=radio]:checked + label {
+  background-color: #f27a11;
+  color: #ffffff;
+}
+
+.intense-left, .intense-right {
+  display: inline-block;
+  padding: 10px;
+  margin: 10px;
+}
+.intense-left h4, .intense-left .h4, .intense-right h4, .intense-right .h4 {
+  border-bottom: 1px solid #000000;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+  position: relative;
+}
+.intense-left h4:before, .intense-left .h4:before, .intense-left h4:after, .intense-left .h4:after, .intense-right h4:before, .intense-right .h4:before, .intense-right h4:after, .intense-right .h4:after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 15px;
+  bottom: -15px;
+  background-color: #000000;
+}
+.intense-left h4:before, .intense-left .h4:before, .intense-right h4:before, .intense-right .h4:before {
+  left: 0;
+}
+.intense-left h4:after, .intense-left .h4:after, .intense-right h4:after, .intense-right .h4:after {
+  right: 0;
 }
