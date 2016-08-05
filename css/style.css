@@ -9114,7 +9114,7 @@ footer .copyright p:not(.copy-text) {
   font-size: 2.1em;
   line-height: 1.2em;
   color: #000000;
-  background: url(../images/back-btn.png) no-repeat left center;
+  background: url(https://cdn.shopify.com/s/files/1/1393/7755/t/3/assets/back-btn.png) no-repeat left center;
   padding-left: 50px;
   background-size: 30px;
 }
@@ -9122,6 +9122,10 @@ footer .copyright p:not(.copy-text) {
   .back-link a {
     font-size: 1.4em;
   }
+}
+.back-link.hide-arrow a {
+  background-image: none;
+  padding-left: 0;
 }
 
 .form-search {
@@ -9271,7 +9275,7 @@ footer .copyright p:not(.copy-text) {
   margin: 15px 0;
 }
 .step-back a {
-  background-image: url(../images/back-btn-white.png);
+  background-image: url(https://cdn.shopify.com/s/files/1/1393/7755/t/3/assets/back-btn-white.png);
   background-repeat: no-repeat;
   background-position: left center;
   background-size: 30px;
@@ -9569,6 +9573,31 @@ footer .copyright p:not(.copy-text) {
     opacity: 1;
   }
 }
+.size-box input[type="button"] {
+  border: 2px solid #ccc;
+  text-align: center;
+  margin-bottom: 50px;
+  background-color: #ffffff;
+  width: 100%;
+  font-weight: 900;
+  font-size: 1.4em;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  padding: 100px 0;
+}
+@media (min-width: 769px) {
+  .size-box input[type="button"] {
+    padding: 200px 0;
+    font-size: 2.2em;
+  }
+}
+.size-box input[type="button"]:hover {
+  -moz-box-shadow: rgba(0, 0, 0, 0.3) 1px 1px 50px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 1px 1px 50px;
+  box-shadow: rgba(0, 0, 0, 0.3) 1px 1px 50px;
+}
+
 .nav-bar {
   background-color: #000000;
 }
@@ -9677,6 +9706,10 @@ footer .copyright p:not(.copy-text) {
 
 .copyright p {
   color: #fff;
+}
+
+.custom-container {
+  max-width: 750px;
 }
 
 /* Developer style sheet */

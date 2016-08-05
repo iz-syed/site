@@ -1026,10 +1026,17 @@ footer {
 
     line-height: 1.2em;
     color:$black;
-    background: url(../images/back-btn.png) no-repeat left center;
+    background: url(https://cdn.shopify.com/s/files/1/1393/7755/t/3/assets/back-btn.png) no-repeat left center;
     padding-left:50px;
     background-size:30px;
   } // a
+
+  &.hide-arrow {
+    a {
+      background-image:none;
+      padding-left: 0;
+    } 
+  }
 }
 
 .form-search {
@@ -1183,7 +1190,7 @@ footer {
   padding-left:10px;
   margin:15px 0;
     a {
-    background-image: url(../images/back-btn-white.png);
+    background-image: url(https://cdn.shopify.com/s/files/1/1393/7755/t/3/assets/back-btn-white.png);
     background-repeat: no-repeat;
     background-position: left center;
     background-size:30px;
@@ -1530,6 +1537,35 @@ footer {
 
 // Animation 
 
+// Size page UI Start
+.size-box {
+
+  input[type="button"] {
+    border:2px solid #ccc;
+    text-align:center;
+    margin-bottom:50px;
+    background-color:$white;
+    width:100%;
+    font-weight:$ultra-bold;
+    font-size:1.4em;
+    @include border-radius(10px);
+    padding:100px 0;
+
+      @include breakpoint(before-tab){ 
+          padding:200px 0;
+          font-size:2.2em;
+      }
+
+      
+      &:hover {
+        @include box-shadow(rgba($black, 0.3) 1px 1px 50px);
+      }
+    
+  }
+
+}
+// Size page UI End
+
 // Theme edit
 .nav-bar {
    background-color:$black;
@@ -1649,8 +1685,9 @@ footer {
 
 .copyright p { color:#fff; }
 
-/* Developer style sheet */
+.custom-container { max-width:750px; }
 
+/* Developer style sheet */
 
 
 
