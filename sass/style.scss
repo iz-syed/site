@@ -1607,6 +1607,10 @@ footer {
   }
 }
 
+.table-wrap { 
+    max-width:85%;
+    margin:0 auto;}
+
 // Theme edit
 
 /* Developer style sheet */
@@ -1690,6 +1694,20 @@ footer {
     } // grid__item:before
   } // cms-title
 } // terms-and-conditions
+
+#terms-and-conditions .wrapper,
+#privacy-policy .wrapper,
+#support .wrapper { max-width:inherit}
+#terms-and-conditions .grid__item.large--two-thirds.push--large--one-sixth,
+#privacy-policy .grid__item.large--two-thirds.push--large--one-sixth,
+#support .grid__item.large--two-thirds.push--large--one-sixth { left:inherit; width:inherit}
+
+#terms-and-conditions .grid__item.large--two-thirds.push--large--one-sixth p,
+#privacy-policy .grid__item.large--two-thirds.push--large--one-sixth p,
+#support .grid__item.large--two-thirds.push--large--one-sixth p {
+  text-transform:capitalize;
+  font-weight: $regular;
+}
 
 .copyright p { color:#fff; }
 

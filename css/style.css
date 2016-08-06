@@ -9146,7 +9146,7 @@ footer .copyright p:not(.copy-text) {
 
 .flavor-btn {
   display: inline-block;
-  margin: 0 -2px;
+  margin: 0 -3px;
   background-color: #000000;
   font-weight: 900;
   text-align: center;
@@ -9489,6 +9489,8 @@ footer .copyright p:not(.copy-text) {
   width: 100%;
   height: 100%;
   z-index: 99;
+  top: 0;
+  left: 0;
 }
 
 .flavour {
@@ -9626,6 +9628,15 @@ footer .copyright p:not(.copy-text) {
   display: none;
 }
 
+.cart__row p {
+  margin: 0 0 15px 0;
+}
+
+.table-wrap {
+  max-width: 85%;
+  margin: 0 auto;
+}
+
 /* Developer style sheet */
 .home-logo {
   max-width: 160px;
@@ -9702,6 +9713,26 @@ footer .copyright p:not(.copy-text) {
   #terms-and-conditions #cms-title:before {
     height: 200px;
   }
+}
+
+#terms-and-conditions .wrapper,
+#privacy-policy .wrapper,
+#support .wrapper {
+  max-width: inherit;
+}
+
+#terms-and-conditions .grid__item.large--two-thirds.push--large--one-sixth,
+#privacy-policy .grid__item.large--two-thirds.push--large--one-sixth,
+#support .grid__item.large--two-thirds.push--large--one-sixth {
+  left: inherit;
+  width: inherit;
+}
+
+#terms-and-conditions .grid__item.large--two-thirds.push--large--one-sixth p,
+#privacy-policy .grid__item.large--two-thirds.push--large--one-sixth p,
+#support .grid__item.large--two-thirds.push--large--one-sixth p {
+  text-transform: capitalize;
+  font-weight: 400;
 }
 
 .copyright p {
