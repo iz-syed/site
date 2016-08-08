@@ -9196,6 +9196,7 @@ footer .copyright p:not(.copy-text) {
 .step-back {
   padding-left: 10px;
   margin: 15px 0;
+  background-color: #C0BFBF;
 }
 .step-back a {
   background-image: url(https://cdn.shopify.com/s/files/1/1393/7755/t/3/assets/back-btn-white.png);
@@ -9700,6 +9701,42 @@ footer .copyright p:not(.copy-text) {
   fill: #02d3db !important;
 }
 
+[data-color="Cereals"],
+[data-color="cereals"] {
+  color: #C0BFBF;
+}
+[data-color="Cereals"] svg path,
+[data-color="cereals"] svg path {
+  fill: #C0BFBF !important;
+}
+
+[data-color="Mints"],
+[data-color="mints"] {
+  color: #65b3c9;
+}
+[data-color="Mints"] svg path,
+[data-color="mints"] svg path {
+  fill: #65b3c9 !important;
+}
+
+[data-color="Extras"],
+[data-color="extras"] {
+  color: #C0BFBF;
+}
+[data-color="Extras"] svg path,
+[data-color="extras"] svg path {
+  fill: #C0BFBF !important;
+}
+
+[data-color="pre-made"],
+[data-color="Pre-Made"] {
+  color: #C0BFBF;
+}
+[data-color="pre-made"] svg path,
+[data-color="Pre-Made"] svg path {
+  fill: #C0BFBF !important;
+}
+
 /* Dynamic Data color */
 /* Dynamic Data-bg color */
 [data-bg="desserts"],
@@ -9731,11 +9768,11 @@ footer .copyright p:not(.copy-text) {
 
 [data-bg="cereals"],
 [data-bg="Cereals"] {
-  background-color: #dd9b2a;
+  background-color: #C0BFBF;
 }
 [data-bg="cereals"]:hover,
 [data-bg="Cereals"]:hover {
-  background-color: #dd9b2a;
+  background-color: #c0bfbf;
 }
 
 [data-bg="drinks"],
@@ -9763,6 +9800,24 @@ footer .copyright p:not(.copy-text) {
 [data-bg="tobacco"]:hover,
 [data-bg="Tobacco"]:hover {
   background-color: #78d2da;
+}
+
+[data-bg="extras"],
+[data-bg="Extras"] {
+  background-color: #C0BFBF;
+}
+[data-bg="extras"]:hover,
+[data-bg="Extras"]:hover {
+  background-color: #c0bfbf;
+}
+
+[data-bg="pre-made"],
+[data-bg="Pre-Made"] {
+  background-color: #C0BFBF;
+}
+[data-bg="pre-made"]:hover,
+[data-bg="Pre-Made"]:hover {
+  background-color: #c0bfbf;
 }
 
 /* Dynamic Data-bg color */

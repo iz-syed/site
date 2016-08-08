@@ -1112,6 +1112,7 @@ footer {
 .step-back {
   padding-left:10px;
   margin:15px 0;
+  background-color:#C0BFBF;
     a {
     background-image: url(https://cdn.shopify.com/s/files/1/1393/7755/t/3/assets/back-btn-white.png);
     background-repeat: no-repeat;
@@ -1668,6 +1669,38 @@ footer {
   }
 } // svg desserts color 4
 
+[data-color="Cereals"],
+[data-color="cereals"] {
+  color:$cereals;
+  svg path {
+    fill: $cereals !important;
+  }
+} // svg desserts color 4  
+
+[data-color="Mints"],
+[data-color="mints"] {
+  color:$mints;
+  svg path {
+    fill: $mints !important;
+  }
+} // svg desserts color 4
+
+[data-color="Extras"],
+[data-color="extras"] {
+  color:$extras;
+  svg path {
+    fill: $extras !important;
+  }
+} // svg desserts color 4
+
+[data-color="pre-made"],
+[data-color="Pre-Made"] {
+  color:$pre-made;
+  svg path {
+    fill: $pre-made !important;
+  }
+} // svg desserts color 4
+
 /* Dynamic Data color */
 
 /* Dynamic Data-bg color */
@@ -1725,6 +1758,24 @@ footer {
       background-color:$tobacco;
       &:hover {
       background-color: rgba($tobacco, 1);  
+      } // tobacco :hover
+  } // bg | tobacco
+// Product bg colors End
+
+  [data-bg="extras"],
+  [data-bg="Extras"] {
+      background-color:$extras;
+      &:hover {
+      background-color: rgba($extras, 1);  
+      } // tobacco :hover
+  } // bg | tobacco
+// Product bg colors End
+
+  [data-bg="pre-made"],
+  [data-bg="Pre-Made"] {
+      background-color:$extras;
+      &:hover {
+      background-color: rgba($extras, 1);  
       } // tobacco :hover
   } // bg | tobacco
 // Product bg colors End
