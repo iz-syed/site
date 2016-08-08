@@ -7,12 +7,22 @@ $(document).ready(function () {
     // $('#home-video').parallax("50%", 0.3);
 
     // Modal box close
+
+
     
 
 
 $().alert('close');
 
+// .flavor {}
+// $( ".flavor > label" ).addClass( "no-test" );
 
+
+// $("input:radio:checked").click(function(){
+//         $("label").addClass("test");
+//     });
+
+    
 
 });
 
@@ -94,8 +104,6 @@ $(function(){
     
     });
 });
-
-
 
 
 

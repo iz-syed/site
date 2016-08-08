@@ -1060,7 +1060,7 @@ footer {
   display: inline-block;
     
     @include breakpoint(desktop) {
-      width:14.4%;
+      width:11.4%;
       padding: 200px 0;
     }
     @include breakpoint(half-hd) {
@@ -1090,56 +1090,6 @@ footer {
   margin-bottom:35px;
 } // choose color
 
-// Product bg colors Start
-  [data-bg="desserts"] { 
-      background-color: $desserts;
-      &:hover {
-      background-color: rgba($desserts, 1);  
-      } // desserts: hover
-    } // bg | desserts
-  
-  [data-bg="fruits"] {
-      background-color:$fruits;
-      &:hover {
-      background-color: rgba($fruits, 1);  
-      } // fruits:  hover
-  } // bg | fruits
-
-  [data-bg="candies"] {
-      background-color:$candies;
-      &:hover {
-      background-color: rgba($candies, 1);  
-      } // candies: hover
-  } // bg | candies
-
-  [data-bg="cereals"] {
-      background-color:$cereals;
-      &:hover {
-      background-color: rgba($cereals, 1);  
-      } // cereals: hover
-  } // bg | cereals
-
-  [data-bg="drinks"] {
-      background-color:$drinks;
-      &:hover {
-      background-color: rgba($drinks, 1);  
-      } // drinsk: hover
-  } // bg | drinsk
-
-  [data-bg="mints"] {
-      background-color:$mints;
-      &:hover {
-      background-color: rgba($mints, 1);  
-      } // mints: hover
-  } // bg | mints
-
-  [data-bg="tobacco"] {
-      background-color:$tobacco;
-      &:hover {
-      background-color: rgba($tobacco, 1);  
-      } // tobacco :hover
-  } // bg | tobacco
-// Product bg colors End
 
 .product-bottle {
 
@@ -1157,33 +1107,6 @@ footer {
 
 } // product-bottle
 
-[data-color="desserts"] {
-  color:$desserts;
-  svg path {
-    fill: $desserts !important;
-  }
-} // svg desserts color 1
-
-[data-color="fruits"] {
-  color:$fruits;
-  svg path {
-    fill: $fruits !important;
-  }
-} // svg desserts color 2
-
-[data-color="orange-light"] {
-  color:$orange-light;
-  svg path {
-    fill: $orange-light !important;
-  }
-} // svg desserts color 3
-
-[data-color="blue-light"] {
-  color:$blue-light;
-  svg path {
-    fill: $blue-light !important;
-  }
-} // svg desserts color 4
 
 
 .step-back {
@@ -1365,7 +1288,6 @@ footer {
                }
             }
 
-          
 
           &:after {
             content:"";
@@ -1712,6 +1634,317 @@ footer {
 .copyright p { color:#fff; }
 
 /* Developer style sheet */
+
+/* Dynamic Data color */
+[data-color="desserts"],
+[data-color="Desserts"] {
+  color:$desserts;
+  svg path {
+    fill: $desserts !important;
+  }
+} // svg desserts color 1
+
+[data-color="fruits"],
+[data-color="Fruits"] {
+  color:$fruits;
+  svg path {
+    fill: $fruits !important;
+  }
+} // svg desserts color 2
+
+[data-color="orange-light"],
+[data-color="Orange-light"] {
+  color:$orange-light;
+  svg path {
+    fill: $orange-light !important;
+  }
+} // svg desserts color 3
+
+[data-color="blue-light"],
+[data-color="Blue-light"] {
+  color:$blue-light;
+  svg path {
+    fill: $blue-light !important;
+  }
+} // svg desserts color 4
+
+/* Dynamic Data color */
+
+/* Dynamic Data-bg color */
+// Product bg colors Start
+  [data-bg="desserts"],
+  [data-bg="Desserts"] { 
+      background-color: $desserts;
+      &:hover {
+      background-color: rgba($desserts, 1);  
+      } // desserts: hover
+    } // bg | desserts
+  
+  [data-bg="fruits"],
+  [data-bg="Fruits"] {
+      background-color:$fruits;
+      &:hover {
+      background-color: rgba($fruits, 1);  
+      } // fruits:  hover
+  } // bg | fruits
+
+  [data-bg="candies"],
+  [data-bg="Candies"] {
+      background-color:$candies;
+      &:hover {
+      background-color: rgba($candies, 1);  
+      } // candies: hover
+  } // bg | candies
+
+  [data-bg="cereals"],
+  [data-bg="Cereals"] {
+      background-color:$cereals;
+      &:hover {
+      background-color: rgba($cereals, 1);  
+      } // cereals: hover
+  } // bg | cereals
+
+  [data-bg="drinks"],
+  [data-bg="Drinks"] {
+      background-color:$drinks;
+      &:hover {
+      background-color: rgba($drinks, 1);  
+      } // drinsk: hover
+  } // bg | drinsk
+
+  [data-bg="mints"],
+  [data-bg="Mints"] {
+      background-color:$mints;
+      &:hover {
+      background-color: rgba($mints, 1);  
+      } // mints: hover
+  } // bg | mints
+
+  [data-bg="tobacco"],
+  [data-bg="Tobacco"] {
+      background-color:$tobacco;
+      &:hover {
+      background-color: rgba($tobacco, 1);  
+      } // tobacco :hover
+  } // bg | tobacco
+// Product bg colors End
+
+/* Dynamic Data-bg color */
+
+
+
+/* Syed */
+[data-id="beginner"] { 
+    position:relative; 
+    text-align:center; 
+    font-weight:$ultra-bold;
+    
+    &:before {
+      content: "15ml x 4 (Beginner)"; 
+      position: absolute; 
+      left:0; 
+      right:0; 
+      bottom:0%;
+
+        @include breakpoint(tab) { 
+            bottom:60%;
+            color:$white;
+        }
+
+    }
+
+    &:after {
+      content: "$24.99"; 
+      position: absolute; 
+      left:0; right:0; 
+      bottom:-8%; 
+      font-size:1.4em;
+
+        @include breakpoint(tab) { 
+            bottom:45%;
+            color:$white;
+        }
+
+    }
+
+    input {
+      background-color:$magento-light !important; 
+      border-color:$magento-dark !important; 
+      color:transparent;
+        
+        @include breakpoint(before-tab) { 
+          background:$magento-light url(https://cdn.shopify.com/s/files/1/1393/7755/t/3/assets/4x15.png) no-repeat center !important; 
+        } 
+    }
+} // beginner
+
+
+[data-id="intermediate"] { 
+    position:relative; 
+    text-align:center; 
+    font-weight:$ultra-bold;
+
+    &:before {
+      content: "30ml x 4 (Intermediate)"; 
+      position: absolute; 
+      left:0; 
+      right:0; 
+      bottom:0%;
+        
+        @include breakpoint(tab) { 
+            bottom:60%;
+            color:$white;
+        }
+    }
+
+    &:after {
+      content: "$44.99"; 
+      position: absolute; 
+      left:0; 
+      right:0; 
+      bottom:-8%; 
+      font-size:1.4em; 
+        
+        @include breakpoint(tab) { 
+            bottom:45%;
+            color:$white;
+        }
+    }
+
+      input  { 
+        background-color:$orange-light !important; 
+        border-color:$orange-dark !important; 
+        color:transparent;
+          
+          @include breakpoint(before-tab) {
+            background:$orange-light url(https://cdn.shopify.com/s/files/1/1393/7755/t/3/assets/4x30.png) no-repeat center !important;
+          } // min width 769
+
+         }
+
+} // intermediate
+
+
+
+[data-id="advanced"] { 
+    position:relative; 
+    text-align:center; 
+    font-weight:$ultra-bold; 
+    
+      &:before {
+        content: "60ml x 4 (Advanced)"; 
+        position: absolute; 
+        left:0; 
+        right:0; 
+        bottom:0%;    
+          
+          @include breakpoint(tab) { 
+              bottom:60%;
+              color:$white;
+          }
+
+      } // before
+
+      &:after {
+        content: "$69.99"; 
+        position: absolute; 
+        left:0; 
+        right:0; 
+        bottom:-8%; 
+        font-size:1.4em;
+          
+          @include breakpoint(tab) { 
+              bottom:45%;
+              color:$white;
+          }
+
+      } //  after
+
+      input {
+        background-color:$blue-light !important; 
+        border-color:$blue-dark !important; 
+        color:transparent;
+
+          @include breakpoint(before-tab) { 
+            background:$blue-light url(https://cdn.shopify.com/s/files/1/1393/7755/t/3/assets/4x60.png) no-repeat center !important; 
+          }
+      } // input
+
+  } // advanced
+
+
+// Modal Box New
+
+.btn-close {
+  color: #aaa;
+  font-size: 30px;
+  text-decoration: none;
+  position: absolute;
+  right: 5px;
+  top: 0;
+}
+.btn-close:hover {
+  color: #919191;
+}
+.modal:before {
+  content: "";
+  display: none;
+  background: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+}
+.modal:target:before {
+  display: block;
+}
+.modal:target .modal-dialog {
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0);
+  top: 20%;
+}
+.modal-dialog {
+  background: #fefefe;
+  border: #333 solid 1px;
+  border-radius: 5px;
+  margin-left: -200px;
+  position: fixed;
+  left: 50%;
+  top: -100%;
+  z-index: 11;
+  width: 360px;
+  -webkit-transform: translate(0, -500%);
+  -ms-transform: translate(0, -500%);
+  transform: translate(0, -500%);
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  -moz-transition: -moz-transform 0.3s ease-out;
+  -o-transition: -o-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
+}
+.modal-body {
+  padding: 20px;
+}
+.modal-header,
+.modal-footer {
+  padding: 10px 20px;
+}
+.modal-header {
+  border-bottom: #eee solid 1px;
+}
+.modal-header h2 {
+  font-size: 20px;
+}
+.modal-footer {
+  border-top: #eee solid 1px;
+  text-align: right;
+}
+/*ADDED TO STOP SCROLLING TO TOP*/
+#close {
+  display: none;
+}
 
 
 
